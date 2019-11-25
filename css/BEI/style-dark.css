@@ -266,7 +266,7 @@ body {
 }
 #header .site-name .description {
   padding: 0.6em 0 0;
-  color: #912cee;
+  color: #fff;
   text-shadow: 1px 2px 3px #113f6e;
   white-space: normal;
   word-wrap: break-word;
@@ -275,7 +275,7 @@ body {
 #logo {
   font: bold 42px/1.2 "宋体";
   white-space: nowrap;
-  color: #912cee;
+  color: #fff;
   text-shadow: 1px 3px 6px #113f6e;
 }
 #nav-menu {
@@ -289,13 +289,13 @@ body {
   display: inline-block;
   padding: 3px 18px 3px;
   line-height: 30px;
-  color: #912cee;
+  color: #fff;
   font-size: 16px;
   border: 1px solid transparent;
 }
 #nav-menu a:hover,
 #nav-menu a.current {
-  border-bottom: 1px solid #912cee;
+  border-bottom: 1px solid #fff;
   -webkit-box-shadow: 0 0 10px #adc2d7 inset;
   box-shadow: 0 0 10px #adc2d7 inset;
 }
@@ -374,7 +374,7 @@ body {
   bottom: -52px;
   right: 0;
   padding: 20px 0;
-  color: #912cee;
+  color: #fff;
   width: 25%;
 }
 #search-form label {
@@ -399,7 +399,7 @@ body {
   line-height: 16px;
   width: 100%;
   border-radius: 15px;
-  color: #912cee;
+  color: #fff;
   background: rgba(0,0,0,0.8);
   -webkit-box-shadow: 0 0 20px #adc2d7 inset;
   box-shadow: 0 0 20px #adc2d7 inset;
@@ -802,7 +802,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #912cee;
+  background: #fff;
   border: 1px solid #d8e2eb;
   -webkit-box-shadow: 0 0 4px #d8e2eb inset;
   box-shadow: 0 0 4px #d8e2eb inset;
@@ -897,7 +897,7 @@ body {
   padding: 0 2px;
 }
 #footer .footer-info .fa.fa-github {
-  color: #912cee;
+  color: #fff;
 }
 #footer .footer-info .fa.fa-github:hover {
   color: #4078c0;
@@ -912,7 +912,7 @@ body {
   color: #756e78;
 }
 #footer .footer-info .fa.fa-email:hover {
-  color: #912cee;
+  color: #fff;
 }
 #footer .footer-info p a {
   margin: 0;
