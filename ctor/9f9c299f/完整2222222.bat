@@ -1,9 +1,8 @@
 @echo off
 :: 384--:¿ìËÙ´ò¿ªÍøÕ¾
 
-Goto Start2
 
-Set À´µÄ´°¿Ú=Start
+Goto Start2
 
 :Start
 Title CMD
@@ -11,10 +10,10 @@ Color 2f
 MODE con: Cols=40 Lines=35
 Set tle=ÍêÕû±¸·İ²¿Êğ·¢²¼
 Set var=0
-Set À´µÄ´°¿Ú=Start
+::Set À´µÄ´°¿Ú=Start
 
 :Menu
-::Set À´µÄ´°¿Ú=Start
+Set À´µÄ´°¿Ú=Start
 cls
 echo ±êÌâ:¡¸ %tle% ¡¹
 echo ---------------------------------------
@@ -177,11 +176,11 @@ Color f0
 MODE con: Cols=40 Lines=35
 Set tle5=·şÎñÆ÷Ñ¡Ïî
 Set var5=0
-Set À´µÄ´°¿Ú=´úÀíÄ¿Â¼
+::Set À´µÄ´°¿Ú=´úÀíÄ¿Â¼
 
 :´úÀíÃæ°å
 ::Set À´µÄ´°¿Ú1=%À´µÄ´°¿Ú%
-::Set À´µÄ´°¿Ú=´úÀíÄ¿Â¼
+Set À´µÄ´°¿Ú=´úÀíÄ¿Â¼
 Set ·şÎñ1±äÁ¿=https://1.wv1.workers.dev/
 Set ·şÎñ2±äÁ¿=https://z.zha.workers.dev/
 Set ·şÎñ3±äÁ¿=https://zj.xiaojin.workers.dev/
@@ -232,6 +231,7 @@ if /i "%choice5%" == "7" cls&Set tle6=ÆßºÅ·şÎñÆ÷&Set ·şÎñ±äÁ¿=%·şÎñ7±äÁ¿%&Goto ½
 if /i "%choice5%" == "8" cls&Set tle6=°ËºÅ·şÎñÆ÷&Set ·şÎñ±äÁ¿=%·şÎñ8±äÁ¿%&Goto ½øÈëÍøÕ¾´óÄ¿Â¼
 if /i "%choice5%" == "9" cls&Set tle6=¾ÅºÅ·şÎñÆ÷&Set ·şÎñ±äÁ¿=%·şÎñ9±äÁ¿%&Goto ½øÈëÍøÕ¾´óÄ¿Â¼
 if /i "%choice5%" == "0" cls&Goto »Øµ½Ö÷²Ëµ¥
+if /i "%choice5%" == "**" cls&Goto Start2
 if /i "%choice5%" == "001" cls&Goto %À´µÄ´°¿Ú1%
 Set var5=1
 Goto ´úÀíÃæ°å
@@ -240,11 +240,11 @@ Goto ´úÀíÃæ°å
 Color 5F
 MODE con: Cols=40 Lines=35
 Set var6=0
-Set À´µÄ´°¿Ú=½øÈëÍøÕ¾´óÄ¿Â¼
+::Set À´µÄ´°¿Ú=½øÈëÍøÕ¾´óÄ¿Â¼
 
 :½øÈëÍøÕ¾Ä¿Â¼
 ::Set À´µÄ´°¿Ú1=%À´µÄ´°¿Ú%
-::Set À´µÄ´°¿Ú=½øÈëÍøÕ¾´óÄ¿Â¼
+Set À´µÄ´°¿Ú=½øÈëÍøÕ¾´óÄ¿Â¼
 Set ¹È¸è=
 Set ÓÍ¹Ü=https://www.youtube.com/
 Set ¶«É­²Æ¾­=https://youtu.be/q8u9qK5niss
@@ -299,7 +299,7 @@ if /i "%choice6%" == "7" cls&Set ÍøÖ·±äÁ¿=%´óÊÀ½ç%&Goto ´ò¿ªÍøÕ¾
 if /i "%choice6%" == "8" cls&Set ÍøÖ·±äÁ¿=%°¢²¨ÂŞ%&Goto ´ò¿ªÍøÕ¾
 if /i "%choice6%" == "9" cls&Set ÍøÖ·±äÁ¿=%Õâ²»ÊÇĞÂÎÅ%&Goto ´ò¿ªÍøÕ¾
 if /i "%choice%6" == "99" cls&Goto ĞÂ½¨ÎÄÕÂ
-if /i "%choice6%" == "66" cls&Goto Start2
+if /i "%choice6%" == "**" cls&Goto Start2
 if /i "%choice6%" == "0" cls&Goto ´úÀíÄ¿Â¼
 if /i "%choice6%" == "00" cls&Goto »Øµ½Ö÷²Ëµ¥
 if /i "%choice6%" == "001" cls&Goto %À´µÄ´°¿Ú1%
@@ -322,10 +322,10 @@ Color 3f
 MODE con: Cols=40 Lines=42
 Set tle2=´ò¿ª³ÌĞòÑ¡Ïî
 Set var2=0
-Set À´µÄ´°¿Ú=Start2
+::Set À´µÄ´°¿Ú=Start2
 
 :Menu2
-::Set À´µÄ´°¿Ú=Start2
+Set À´µÄ´°¿Ú=Start2
 Set Î¢ĞÅ=E:\Program Files\Tencent\WeChat\WeChat.exe
 Set ¹Ø±ÕÎ¢ĞÅ=WeChat.exe
 ::------------------------------
@@ -365,14 +365,17 @@ Set ¹Ø±Õchrome=chrome.exe
 ::------------------------------
 Set IDM="C:\Program Files (x86)\Internet Download Manager\IDMan.exe"
 Set ¹Ø±ÕIDM=IDMan.exe
-::------------------------³Ì0Ğò--
+::------------------------------
+Set sha1="E:\Program Files (x86)\sha1\HashMyFiles.exe"
+Set ¹Ø±Õsha1=HashMyFiles.exe
+::------------------------------
 cls
 echo ±êÌâ:¡¸ %tle2% ¡¹¡¸ %tle6% ¡¹
 echo ---------------------------------------
 echo ²Ëµ¥:£¨¹Ø±Õ¼Ó0£©
 echo       00  ´óÍ·Õë ÈÎÎñ¹ÜÀí Chrome 
 echo.
-echo       1  ´ò¿ªÎ¢ĞÅ         01  ¹Ø±Õ
+echo       1  ´ò¿ªÎ¢ĞÅ         16  sha1
 echo.
 echo       2  Atom             02  ¹Ø±Õ
 echo.
@@ -398,7 +401,7 @@ echo       12  Chrome          012 ¹Ø±Õ
 echo.
 echo       13  IDM             013 ¹Ø±Õ
 echo.
-echo       14  ÇåÀíÄÚ´æ        15  ´úÀíÍø     
+echo       14  ÇåÀíÄÚ´æ        15 ´úÀíÍø     
 echo.
 echo       0  »Øµ½Ö÷²Ëµ¥       £Ñ  ÍË³ö
 echo.
@@ -437,12 +440,16 @@ if /i "%choice2%" == "12" cls&Set ±äÁ¿5=%Chrome%&Goto 1´ò¿ªÈí¼ş×î´ó»¯
 if /i "%choice2%" == "012" cls&Set ±äÁ¿2=%¹Ø±ÕChrome%&Goto 1¹Ø±ÕÈí¼ş
 if /i "%choice2%" == "13" cls&Set ±äÁ¿1="%IDM%"&Goto 1´ò¿ªÈí¼ş×îĞ¡»¯
 if /i "%choice2%" == "013" cls&Set ±äÁ¿2=%¹Ø±ÕIDM%&Goto 1¹Ø±ÕÈí¼ş
+if /i "%choice2%" == "16" cls&Set ±äÁ¿3="%sha1%"&Goto 1´ò¿ªÈí¼ş³£¹æ
+if /i "%choice2%" == "016" cls&Set ±äÁ¿2=%¹Ø±Õsha1%&Goto 1¹Ø±ÕÈí¼ş
 if /i "%choice2%" == "0" cls&Goto »Øµ½Ö÷²Ëµ¥
 if /i "%choice2%" == "14" cls&Set »Øµ½À´µÄ´°¿Ú=Start2&Goto ÇåÀíÄÚ´æ
 if /i "%choice2%" == "15" cls&Goto ¿ìËÙ´úÀíÃæ°å
-if /i "%choice2%" == "16" cls&Goto ¿ìËÙ½øÈëÍøÕ¾Ä¿Â¼
+if /i "%choice2%" == "*15" cls&Goto ¿ìËÙ½øÈëÍøÕ¾Ä¿Â¼
+if /i "%choice2%" == "18" cls&Goto ´ò¿ªË«
 if /i "%choice2%" == "99" cls&Goto ĞÂ½¨ÎÄÕÂ
 if /i "%choice2%" == "150" cls&Goto ´úÀíÄ¿Â¼
+if /i "%choice2%" == "**" cls&Goto ¼òÊö½çÃæ
 if /i "%choice2%" == "001" cls&Goto %À´µÄ´°¿Ú1%
 if /i "%choice2%" == "r" cls&Goto RestTeredo
 if /i "%choice2%" == "q" Popd&Exit
@@ -528,7 +535,7 @@ Set /p choice6=Ñ¡ÔñÍøÖ·:
 Set "choice6=%choice6:"=%"
 if "%choice6:~-1%"=="=" Goto ¿ìËÙ½øÈëÍøÕ¾Ä¿Â¼1
 if "%choice6%"=="" Goto ¿ìËÙ½øÈëÍøÕ¾Ä¿Â¼1
-if /i "%choice6%" == "1" cls&Goto ´ò¿ªÍøÕ¾2
+if /i "%choice6%" == "1" cls&Goto ¿ìËÙ´ò¿ªÍøÕ¾2
 if /i "%choice6%" == "2" cls&Set ÍøÖ·±äÁ¿=%ÓÍ¹Ü%&Goto ¿ìËÙ´ò¿ªÍøÕ¾
 if /i "%choice6%" == "3" cls&Set ÍøÖ·±äÁ¿=%¶«É­²Æ¾­%&Goto ¿ìËÙ´ò¿ªÍøÕ¾
 if /i "%choice6%" == "4" cls&Set ÍøÖ·±äÁ¿=%¶«É­51%&Goto ¿ìËÙ´ò¿ªÍøÕ¾
@@ -577,6 +584,14 @@ start  "" "%±äÁ¿5%"
 Set ±äÁ¿5=
 Goto Menu2
 
+:´ò¿ª¶à¸ö³ÌĞò
+MODE con: Cols=40 Lines=32
+echo ÕıÔÚ´ò¿ªÖĞ£¬ÇëÉÔºó¡£¡£¡£
+start /min "" "C:\Windows\System32\Taskmgr.exe"
+start /min "" "E:\Program Files (x86)\DeskPins-chs 1.30\DeskPins.exe"
+start /max "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --enable-features=WebUIDarkMode --force-dark-mode
+Goto End2
+
 :1¹Ø±ÕÈí¼ş
 ::taskkill /f /im %±äÁ¿2%
 taskkill /im %±äÁ¿2% /f
@@ -606,6 +621,7 @@ cls
 @taskkill /im Thunder5.exe /f
 cls
 @taskkill /im WinRAR.exe /f
+@taskkill /im HashMyFiles.exe /f
 ::´ò¿ª¶à¸ö³ÌĞò
 @taskkill /im Taskmgr.exe /f
 cls
@@ -614,19 +630,13 @@ cls
 @taskkill /im chrome.exe /f
 Goto Start2
 
-:´ò¿ª¶à¸ö³ÌĞò
-MODE con: Cols=40 Lines=32
-echo ÕıÔÚ´ò¿ªÖĞ£¬ÇëÉÔºó¡£¡£¡£
-start /min "" "C:\Windows\System32\Taskmgr.exe"
-start /min "" "E:\Program Files (x86)\DeskPins-chs 1.30\DeskPins.exe"
-start /max "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --enable-features=WebUIDarkMode --force-dark-mode
-Goto End2
+
 
 :²¿Êğ4000
 MODE con: Cols=40 Lines=32
 echo ÕıÔÚ²¿Êğ4000£¬ÇëÉÔºó¡£¡£¡£
 start /min "" "E:\µçÄÔ\hexo¿ì½İ\Æô¶¯localhost4000.bat"
-ping 127.1 -n 6 >nul
+ping 127.1 -n 9 >nul
 start chrome.exe  "http://localhost:4000"
 Goto End
 
@@ -828,18 +838,14 @@ Goto End
 :End
 Set È¥µÄ´°¿Ú=%À´µÄ´°¿Ú%
 Set À´µÄ´°¿Ú=
-if "%choice%" neq "" (
-    cls
-    Color 2e
-    MODE con: Cols=40 Lines=23
-    if "%choice%" neq "3" (
-        echo ²Ù×÷Íê³É !!!
-        if exist %WINDIR%\System32\timeout.exe (timeout /t 1) else (if exist %WINDIR%\System32\choice.exe (choice /t 1 /d y /n >nul) else (ping 127.1 -n 1 >nul))
-    )
-    Goto %È¥µÄ´°¿Ú%
-)
+ping 127.1 -n 1 >nul
+cls
+MODE con: Cols=40 Lines=23
+echo ²Ù×÷Íê³É !!!
+Goto %È¥µÄ´°¿Ú%
 
 :End2
+Set choice=0
 if "%choice%" neq "" (
     cls
     Color 2e
@@ -850,3 +856,25 @@ if "%choice%" neq "" (
     )
     Goto Start2
 )
+
+:¼òÊö½çÃæ
+MODE con: Cols=40 Lines=35
+Set tle0=¼òÊöËµÃ÷
+Set var0=0
+
+:¼òÊöËµÃ÷
+cls
+echo ±êÌâ:¡¸ %tle0% ¡¹
+echo ---------------------------------------
+echo       
+echo       00  ´óÍ·Õë ÈÎÎñ¹ÜÀí Chrome 
+echo.
+echo       1  ´ò¿ªÎ¢ĞÅ         01  ¹Ø±Õ
+echo.
+echo       2  Atom             02  ¹Ø±Õ
+echo.
+echo       3  Ñ¶·ÉÓïÒô         03  ¹Ø±Õ
+pause  
+Set È¥µÄ´°¿Ú=%À´µÄ´°¿Ú%
+Set À´µÄ´°¿Ú=
+Goto %È¥µÄ´°¿Ú%    
