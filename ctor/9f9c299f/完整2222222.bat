@@ -1,6 +1,7 @@
 @echo off
 :: 384--:快速打开网站
 
+Goto 打开多个程序
 
 Goto Start2
 
@@ -79,7 +80,7 @@ Goto Menu
 
 :打开双
 Set /p 双成=请输入暗号:
-start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe --enable-features=WebUIDarkMode --force-dark-mode"  https://www.laokgg.tk/ctor/%双成%.html
+start /max "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"  --enable-features=WebUIDarkMode --force-dark-mode  "https://www.laokgg.tk/ctor/%双成%.html"
 Set 双成=
 Goto End
 
@@ -343,7 +344,7 @@ Goto 进入网站目录
 Title 面板二  程序相关
 :: 蓝色 Color 3f
 Color 2f  
-MODE con: Cols=40 Lines=42
+MODE con: Cols=42 Lines=42
 Set tle2=打开程序选项
 Set var2=0
 ::Set 来的窗口=Start2
@@ -402,8 +403,10 @@ Set BitComet=E:\Program Files\BitComet\BitComet\BitComet.exe
 Set 关闭BitComet=BitComet.exe
 ::------------------------------
 cls
+echo.
 echo 标题:「 %tle2% 」「 %tle6% 」
-echo ---------------------------------------
+echo ------------------------------------------
+echo.
 echo 菜单:（关闭加0）
 echo       00  大头针 任务管理 Chrome 
 echo.
@@ -421,13 +424,13 @@ echo       6  PotPlayer        21  书签便签
 echo.
 echo       7  发布记录         22  BitComet
 echo.
-echo       8  17查ip           08  关闭
+echo       8  17查ip           23  便签
 echo.
-echo       9  打开迅雷         09  关闭
+echo       9  打开迅雷         24  计算器
 echo.
-echo       10  WinRAR          010 关闭
+echo       10  WinRAR          25 虚拟机
 echo.
-echo       11  ssr             011 关闭  
+echo       11  ssr             26 步骤记录器  
 echo.
 echo       12  Chrome          012 关闭 
 echo.
@@ -437,7 +440,7 @@ echo       14  清理内存        15 代理网
 echo.
 echo       0  回到主菜单       Ｑ  退出
 echo.
-echo ---------------------------------------
+echo ------------------------------------------
 if %var2% neq 0 echo (输入无效请重新输入)
 Set choice2=
 Set /p choice2=选择: 
@@ -482,6 +485,10 @@ if /i "%choice2%" == "020" cls&Set 变量2=%关闭键盘%&Goto 1关闭软件
 if /i "%choice2%" == "21" cls&Set 变量1="%书签便签%"&Goto 1打开软件最小化
 if /i "%choice2%" == "22" cls&Set 变量3=%BitComet%&Goto 1打开软件常规
 if /i "%choice2%" == "022" cls&Set 变量2=%关闭BitComet%&Goto 1关闭软件
+if /i "%choice2%" == "23" cls&start /max "" "E:\工具\便笺 - 快捷方式.lnk"&Goto Menu2
+if /i "%choice2%" == "24" cls&start /max "" "E:\工具\计算器 - 快捷方式.lnk"&Goto Menu2
+if /i "%choice2%" == "25" cls&start /max "" "E:\工具\Windows Sandbox - 快捷方式.lnk"&Goto Menu2
+if /i "%choice2%" == "26" cls&start /max "" "E:\工具\步骤记录器 - 快捷方式.lnk"&Goto Menu2
 ::删除任务schtasks /delete /tn 定时51  /f
 if /i "%choice2%" == "019" cls&schtasks /delete /tn 定时51  /f&Goto Start2
 if /i "%choice2%" == "0" cls&Goto 回到主菜单
@@ -534,7 +541,7 @@ echo 正在打开中，请稍后。。。
 start /min "" "C:\Windows\System32\Taskmgr.exe"
 start /min "" "E:\Program Files (x86)\DeskPins-chs 1.30\DeskPins.exe"
 start /max "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --enable-features=WebUIDarkMode --force-dark-mode
-Goto End2
+Goto Start2
 
 :1关闭软件
 ::taskkill /f /im %变量2%
@@ -689,7 +696,7 @@ Goto Start
 :系统面板
 Title 系统
 Color 20
-MODE con: Cols=40 Lines=38
+MODE con: Cols=42 Lines=42
 Set tle=应用
 Set var=0
 
@@ -697,39 +704,41 @@ Set var=0
 Set 来的窗口=系统面板
 cls
 echo 标题:「 %tle% 」
-echo ---------------------------------------
+echo ------------------------------------------
 echo 菜单:
-echo       ⑴  服务 services.msc 
+echo   ⑴  服务 services.msc  16 便签
 echo.
-echo       ⑵  任务管理器 
+echo   ⑵  任务管理器         17 计算器
 echo.
-echo       ⑶  防火墙
+echo   ⑶  防火墙             18 虚拟机
 echo.
-echo       ⑷  本地安全策略
+echo   ⑷  本地安全策略       19 步骤记录器
 echo.
-echo       ⑸  本地用户及组
+echo   ⑸  本地用户及组
 echo.
-echo       ⑹  本地组策略编辑器
+echo   ⑹  本地组策略编辑器
 echo.
-echo       ⑺  磁盘管理器
+echo   ⑺  磁盘管理器
 echo.
-echo       ⑻  共享文件夹
+echo   ⑻  共享文件夹
 echo.
-echo       ⑼  计算机管理
+echo   ⑼  计算机管理
 echo.
-echo       ⑽  设备管理器
+echo   ⑽  设备管理器
 echo.
-echo       ⑾  启动杀软
+echo   ⑾  启动杀软
 echo.
-echo       ⑿  停止杀软
+echo   ⑿  停止杀软
 echo.
-echo       ⒀  打开注册表
+echo   ⒀  打开注册表
 echo.
-echo       14  删除运行记录
+echo   14  删除运行记录
 echo.
-echo       Ｑ  退出     15
+echo   15  打开控制面板
 echo.
-echo ---------------------------------------
+echo   Ｑ  退出     15
+echo.
+echo ------------------------------------------
 if %var% neq 0 echo (输入无效请重新输入)
 Set choice=
 Set /p choice=选择:
@@ -750,7 +759,12 @@ if /i "%choice%" == "11" cls&start  "" "E:\杀软\启动杀软.bat - 快捷方式.lnk"&Got
 if /i "%choice%" == "12" cls&start  "" "E:\杀软\停止杀软.bat - 快捷方式.lnk"&Goto 系统面板
 if /i "%choice%" == "13" cls&start  "" "E:\杀软\注册表.bat - 快捷方式.lnk"&Goto 系统面板
 if /i "%choice%" == "14" cls&start  "" "E:\杀软\删除运行记录.bat - 快捷方式"&Goto 系统面板  
-if /i "%choice%" == "15" cls&Goto 代理目录
+if /i "%choice%" == "15" cls&start /max "" "control"&Goto 系统面板
+if /i "%choice%" == "16" cls&start /max "" "E:\工具\便笺 - 快捷方式.lnk"&Goto 系统面板
+if /i "%choice%" == "17" cls&start /max "" "E:\工具\计算器 - 快捷方式.lnk"&Goto 系统面板
+if /i "%choice%" == "18" cls&start /max "" "E:\工具\Windows Sandbox - 快捷方式.lnk"&Goto 系统面板
+if /i "%choice%" == "19" cls&start /max "" "E:\工具\步骤记录器 - 快捷方式.lnk"&Goto 系统面板
+if /i "%choice%" == "115" cls&Goto 代理目录
 if /i "%choice%" == "18" cls&Goto 打开双
 if /i "%choice%" == "r" cls&Goto RestTeredo
 if /i "%choice%" == "q" Popd&Exit
