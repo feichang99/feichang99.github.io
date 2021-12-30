@@ -9,7 +9,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
 <p>3、创建SSH,一路回车：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"GitHub的邮箱"</span></span><br></pre></td></tr></table></figure>
-<p>已经生成了.ssh文件夹里：<br><img src="https://led029.github.io/tuchuang/hexo/%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2/1.jpg" alt="图示"><br>4、新生成的密钥改名后将第一个密钥放回文件夹里（.ssh）<br>5、公钥放GitHub里<br>6、在gitbash中，查看是否成功</p>
+<p>已经生成了.ssh文件夹里：<br><img src="https://zj029.github.io/tuchuang/hexo/%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2/1.jpg" alt="图示"><br>4、新生成的密钥改名后将第一个密钥放回文件夹里（.ssh）<br>5、公钥放GitHub里<br>6、在gitbash中，查看是否成功</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>7、在第二个博客文件夹下安装deploy-git</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
