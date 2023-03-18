@@ -1,0 +1,10 @@
+ifeng.com###root > div.layout-u18-agac > div.news_box-3RzDtrsX.clearfix:nth-child(6) > div.left_box-7d48CK7i:first-child > div.slide_box-36p6_lZa.slide_2x-1KDq_3y3:first-child > div.box-kbJVDyI6 > div.slider-23k1pgNu:last-child > div.container-3J0fgyFB > div:nth-child(10)
+###movie_player > div.ytp-chrome-top:nth-child(3) > div.ytp-chrome-top-buttons:last-child > button.ytp-button.ytp-cards-button:nth-child(4) > span.ytp-cards-button-icon-default:first-child > div.ytp-cards-button-icon:first-child
+aboluowang.com###Pad_L1
+###root > div.layout-u18-agac > div.news_box-3RzDtrsX.clearfix:nth-child(6) > div.yaowen_center_box-3Kjo1o6j:nth-child(2) > div.tabBodyItemActive-H7rMJtKB:last-child > div.news_list-1dYUdgWQ:nth-child(3) > p.news_list_p-3EcL2Tvk.news_list_markTag-1--AQmyX
+ifeng.com###root > div.layout-u18-agac > div.news_box-3RzDtrsX.clearfix:nth-child(6) > div.yaowen_center_box-3Kjo1o6j:nth-child(2) > div.tabBodyItemActive-H7rMJtKB:last-child > div.news_list-1dYUdgWQ:nth-child(5) > p.news_list_p-3EcL2Tvk.news_list_markTag-1--AQmyX
+ifeng.com###root > div.layout-u18-agac > div.news_box-2HYXiz_X.clearfix:nth-child(7) > div.box_r-1teFllyX:last-child > div.clearfix:first-child > div.center_box-1uhfw1dH:first-child > div.title_box-3Iu6_w7V.middle_title_box-1ZkfBvbV:first-child > a.more-38Itzg7R:last-child
+v.ifeng.com###root > div.index_toTop_SxwSz:last-child
+###movie_player > div.ytp-chrome-top:nth-child(3) > div.ytp-chrome-top-buttons:last-child > button.ytp-watch-later-button.ytp-button:first-child > div.ytp-watch-later-icon:first-child
+###movie_player > div.ytp-chrome-top:nth-child(3) > div.ytp-title:nth-child(3) > div.ytp-title-text > a.ytp-title-link.yt-uix-sessionlink.ytp-title-fullerscreen-link:first-child
+youtube.com###movie_player > div.ytp-chrome-top:nth-child(3)
