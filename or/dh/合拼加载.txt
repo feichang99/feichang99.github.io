@@ -1,0 +1,28 @@
+let
+    // 设置包含TXT文件的文件夹路径
+    文件夹路径 = "D:\Desktop\51\新建文件夹",  // ← 替换为你自己的路径
+
+    // 获取文件夹中所有 .txt 文件
+    文件列表 = Folder.Files(文件夹路径),
+    仅TXT = Table.SelectRows(文件列表, each Text.EndsWith([Extension], ".txt")),
+
+    // 读取每个文件的内容并解析为表格
+    添加表格列 = Table.AddColumn(仅TXT, "表格", each 
+        let
+            内容 = Text.FromBinary([Content], 936),
+            行列表 = Lines.FromText(内容),
+            拆分列 = List.Transform(行列表, each Text.Split(_, " ")),
+            表格 = Table.FromRows(拆分列)
+        in
+            表格
+    ),
+
+    // 仅保留“表格列”
+    仅表格 = 添加表格列[表格],
+
+    // 合并所有表格（按列横向连接）
+    合并表 = List.Zip(List.Transform(仅表格, each Table.ToRows(_))),
+    最终行 = List.Transform(合并表, each List.Combine(_)),
+    最终表格 = Table.FromRows(最终行)
+in
+    最终表格
