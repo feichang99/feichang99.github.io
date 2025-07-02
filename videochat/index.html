@@ -1,38 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh">
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PeerJS 视频聊天</title>
-  <link rel="stylesheet" href="./style.css" />
-  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎥 PeerJS 视频聊天</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h2>🎥 PeerJS 视频聊天</h2>
-
     <div class="panel">
-      <label>你的 ID：</label>
-      <input id="my-id" readonly />
-      <label>对方 ID：</label>
-      <input id="target-id" placeholder="输入对方 ID..." />
+      <label>你的 ID：<input id="my-id" readonly></label>
+      <label>对方 ID：<input id="target-id"></label>
       <button id="call-btn">📞 呼叫</button>
+      <p id="status">⏳ 初始化中...</p>
     </div>
-
     <div class="videos">
       <div>
         <p>🎬 你</p>
-        <video id="local-video" autoplay muted playsinline></video>
+        <video id="local-video" autoplay muted></video>
       </div>
       <div>
         <p>📺 对方</p>
-        <video id="remote-video" autoplay playsinline></video>
+        <video id="remote-video" autoplay></video>
       </div>
     </div>
-
-    <p id="status"></p>
   </div>
-
-  <script src="./script.js"></script>
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+  <script defer src="script.js"></script>
 </body>
 </html>
