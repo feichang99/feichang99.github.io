@@ -11,15 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function getMediaStream() {
     return navigator.mediaDevices.getUserMedia({ video: true, audio: true })
       .catch(err => {
-        console.warn('摄像头不可用，尝试只用麦克风:', err);
-        if (err.name === 'NotReadableError' || err.name === 'NotAllowedError') {
+        console.warn('无法访问摄像头，尝试仅用麦克风:', err);
+        if (err.name === 'NotReadableError' || err.name === 'NotAllowedError' || err.name === 'NotFoundError') {
+          status.textContent = '⚠️ 无法访问摄像头，尝试仅用麦克风';
           return navigator.mediaDevices.getUserMedia({ video: false, audio: true })
             .catch(audioErr => {
               console.error('麦克风也无法访问:', audioErr);
-              throw audioErr; // Rethrow to handle in the main catch block
+              status.textContent = '🚫 无法访问摄像头和麦克风';
+              throw new Error('无法访问媒体设备');
             });
         }
-        throw err; // Rethrow other errors
+        throw err;
       });
   }
 
@@ -36,13 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
     .catch(err => {
-      console.error('访问媒体设备失败:', err);
-      status.textContent = '🚫 无法访问摄像头和麦克风';
+      console.error('媒体流初始化失败:', err);
+      status.textContent = '🚫 无法初始化媒体流，请检查设备权限';
+      localStream = null; // Explicitly set to null
     });
 
   peer.on('open', id => {
     myIdInput.value = id;
-    status.textContent = '✅ 请将你的 ID 发给对方';
+    console.log('PeerJS ID:', id);
+    if (localStream) {
+      status.textContent = '✅ 请将你的 ID 发给对方';
+    }
   });
 
   peer.on('call', call => {
@@ -63,12 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     if (!localStream) {
-      alert('本地媒体流未准备好');
+      alert('本地媒体流未准备好，请检查摄像头/麦克风权限');
       return;
     }
     const call = peer.call(targetId, localStream);
     call.on('stream', remoteStream => {
       remoteVideo.srcObject = remoteStream;
+    });
+    call.on('error', err => {
+      console.error('呼叫错误:', err);
+      status.textContent = '🚫 呼叫失败，请检查对方ID或网络';
     });
   };
 });
