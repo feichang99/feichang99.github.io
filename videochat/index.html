@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🎥 PeerJS 语音聊天</title>
+  <title>🎤 PeerJS 语音聊天</title>
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
@@ -46,15 +46,16 @@
   </style>
 </head>
 <body>
-  <h2>🎥 PeerJS 语音聊天</h2>
+  <h2>🎤 PeerJS 语音聊天</h2>
 
   <label>你的 ID：<input id="my-id" readonly></label>
   <label>对方 ID：<input id="target-id" placeholder="请输入对方ID"></label>
   <button id="call-btn">📞 呼叫</button>
   <p id="status">⏳ 初始化中...</p>
 
-  <audio id="remote-audio" autoplay style="width: 100%; margin-top: 20px;"></audio>
-  <button id="play-audio-btn" style="margin-top: 10px;">点击开始播放音频</button>
+  <audio id="remote-audio" autoplay></audio>
+  <button id="play-audio-btn">▶️ 点击播放远端音频</button>
+  <button id="debug-audio-btn">🔧 测试远端音频是否有效</button>
 
   <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
   <script defer src="script.js"></script>
