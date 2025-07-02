@@ -33,20 +33,25 @@ document.addEventListener('DOMContentLoaded', () => {
     status.textContent = localStream ? '✅ 请将你的 ID 发给对方' : '🚫 麦克风未准备';
   });
 
-  // 接收来电
+  // 接收来电，弹窗确认是否接听
   peer.on('call', call => {
     if (!localStream) {
       status.textContent = '🚫 麦克风不可用，无法接听';
       return;
     }
-    call.answer(localStream);
-    call.on('stream', remoteStream => {
-      remoteVideo.srcObject = remoteStream;
-      remoteVideo.style.display = 'block';
-    });
-    call.on('error', () => {
-      status.textContent = '🚫 接听失败，请检查网络';
-    });
+    const accept = confirm(`对方(${call.peer})请求通话，是否接听？`);
+    if (accept) {
+      call.answer(localStream);
+      call.on('stream', remoteStream => {
+        remoteVideo.srcObject = remoteStream;
+        remoteVideo.style.display = 'block';
+      });
+      call.on('error', () => {
+        status.textContent = '🚫 接听失败，请检查网络';
+      });
+    } else {
+      call.close();
+    }
   });
 
   // 发起呼叫
