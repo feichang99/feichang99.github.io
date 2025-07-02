@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const peer = new Peer();
-  const remoteVideo = document.getElementById('remote-video');
+  const remoteAudio = document.getElementById('remote-audio');
   const myIdInput = document.getElementById('my-id');
   const targetIdInput = document.getElementById('target-id');
   const callBtn = document.getElementById('call-btn');
   const status = document.getElementById('status');
   let localStream;
 
-  // 尝试获取麦克风，重试机制
+  // 获取麦克风音频流，重试3次
   function getMediaStream(retries = 3, delay = 1000) {
     return navigator.mediaDevices.getUserMedia({ audio: true })
       .then(stream => {
@@ -41,44 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const accept = confirm(`对方(${call.peer})请求通话，是否接听？`);
     if (accept) {
-      call.answer(localStream);
-      call.on('stream', remoteStream => {
-        remoteVideo.srcObject = remoteStream;
-        remoteVideo.style.display = 'block';
-      });
-      call.on('error', () => {
-        status.textContent = '🚫 接听失败，请检查网络';
-      });
-    } else {
-      call.close();
-    }
-  });
-
-  // 发起呼叫
-  callBtn.onclick = () => {
-    const targetId = targetIdInput.value.trim();
-    if (!targetId) {
-      alert('请输入对方ID');
-      return;
-    }
-    if (!localStream) {
-      alert('麦克风未准备好，请检查权限或占用');
-      return;
-    }
-    const call = peer.call(targetId, localStream);
-    call.on('stream', remoteStream => {
-      remoteVideo.srcObject = remoteStream;
-      remoteVideo.style.display = 'block';
-    });
-    call.on('error', () => {
-      status.textContent = '🚫 呼叫失败，请检查对方ID或网络';
-    });
-  };
-
-  // 页面关闭或刷新时释放麦克风
-  window.addEventListener('beforeunload', () => {
-    if (localStream) {
-      localStream.getTracks().forEach(track => track.stop());
-    }
-  });
-});
+      console.log('接听来电

@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎥 PeerJS 视频聊天</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🎧 PeerJS 纯音频聊天</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h2>🎥 PeerJS 视频聊天</h2>
+    <h2>🎧 PeerJS 纯音频聊天</h2>
     <div class="panel">
-      <label>你的 ID：<input id="my-id" readonly></label>
-      <label>对方 ID：<input id="target-id"></label>
+      <label>你的 ID：<input id="my-id" readonly /></label>
+      <label>对方 ID：<input id="target-id" /></label>
       <button id="call-btn">📞 呼叫</button>
       <p id="status">⏳ 初始化中...</p>
     </div>
-    <div class="videos">
+    <div class="audios">
       <div>
-        <p>🎬 你</p>
-        <video id="local-video" autoplay muted></video>
+        <p>🎤 你（麦克风）</p>
+        <audio id="local-audio" autoplay muted></audio>
       </div>
       <div>
-        <p>📺 对方</p>
-        <video id="remote-video" autoplay></video>
+        <p>🎧 对方</p>
+        <audio id="remote-audio" autoplay></audio>
       </div>
     </div>
   </div>
+
   <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
   <script defer src="script.js"></script>
 </body>
