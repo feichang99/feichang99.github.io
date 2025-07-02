@@ -1,4 +1,4 @@
-const peer = new Peer(); // 默认服务器
+const peer = new Peer(); // 默认使用 peerjs 的 cloud server
 
 const localVideo = document.getElementById('local-video');
 const remoteVideo = document.getElementById('remote-video');
