@@ -41,4 +41,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const accept = confirm(`对方(${call.peer})请求通话，是否接听？`);
     if (accept) {
-      console.log('接听来电
+      console.log('接听来电，answer...');
+      call.answer(localStream);
+      call.on('stream', remoteStream => {
+        console.log('收到远端流，开始播放');
+        remoteAudio.srcObject = remoteStream;
+        remoteAudio.style.display = 'block';
+      });
+      call.on('error', err => {
+        console.error('接听时发生错误:', err);
+        status.textContent = '🚫 接听失败，请检查网络';
+      });
+    } else {
+      console.log('拒绝接听');
+      call.close();
+    }
+  });
+
+  // 发起呼叫
+  callBtn.onclick = () => {
+    const targetId = targetIdInput.value.trim();
+    if (!targetId) {
+      alert('请输入对方ID');
+      return;
+    }
+    if (!localStream) {
+      alert('麦克风未准备好，请检查权限或占用');
+      return;
+    }
+    const call = peer.call(targetId, localStream);
+    call.on('stream', remoteStream => {
+      console.log('呼叫连接成功，开始播放远端流');
+      remoteAudio.srcObject = remoteStream;
+      remoteAudio.style.display = 'block';
+    });
+    call.on('error', err => {
+      console.error('呼叫时发生错误:', err);
+      status.textContent = '🚫 呼叫失败，请检查对方ID或网络';
+    });
+  };
+
+  // 页面关闭或刷新时释放麦克风
+  window.addEventListener('beforeunload', () => {
+    if (localStream) {
+      localStream.getTracks().forEach(track => track.stop());
+    }
+  });
+});
