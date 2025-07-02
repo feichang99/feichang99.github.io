@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>const peer = new Peer(); // 使用默认 PeerJS 免费服务器
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>const peer = new Peer(); // 使用默认服务器
 
 const localVideo = document.getElementById('local-video');
 const remoteVideo = document.getElementById('remote-video');
@@ -9,7 +9,7 @@ const status = document.getElementById('status');
 
 let localStream;
 
-// 获取本地摄像头和麦克风
+// 获取本地媒体流
 navigator.mediaDevices.getUserMedia({ video: true, audio: true })
   .then(stream => {
     localStream = stream;
@@ -20,13 +20,13 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     status.textContent = '🚫 无法访问摄像头和麦克风';
   });
 
-// 初始化 PeerJS，获取 ID
+// 初始化 PeerJS
 peer.on('open', id => {
   myIdInput.value = id;
-  status.textContent = '✅ 准备就绪，分享你的 ID';
+  status.textContent = '✅ 请将你的 ID 发给对方';
 });
 
-// 接听来电
+// 接听
 peer.on('call', call => {
   call.answer(localStream);
   call.on('stream', remoteStream => {
@@ -34,9 +34,9 @@ peer.on('call', call => {
   });
 });
 
-// 主动呼叫
+// 呼叫
 callBtn.onclick = () => {
-  const targetId = targetIdInput.value;
+  const targetId = targetIdInput.value.trim();
   if (!targetId) return;
   const call = peer.call(targetId, localStream);
   call.on('stream', remoteStream => {
