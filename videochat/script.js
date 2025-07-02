@@ -9,44 +9,30 @@ document.addEventListener('DOMContentLoaded', () => {
   let localStream;
 
   function getMediaStream() {
-    return navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+    return navigator.mediaDevices.getUserMedia({ audio: true })
       .catch(err => {
-        console.warn('无法访问摄像头，尝试仅用麦克风:', err);
-        if (err.name === 'NotReadableError' || err.name === 'NotAllowedError' || err.name === 'NotFoundError') {
-          status.textContent = '⚠️ 无法访问摄像头，尝试仅用麦克风';
-          return navigator.mediaDevices.getUserMedia({ video: false, audio: true });
-        }
-        throw err;
-      })
-      .catch(err => {
-        console.error('麦克风也无法访问:', err);
-        status.textContent = '🚫 无法访问摄像头和麦克风';
-        return null; // Return null if both attempts fail
+        console.error('麦克风访问失败:', err);
+        status.textContent = '🚫 无法访问麦克风，请检查设备权限';
+        return null;
       });
   }
 
   getMediaStream()
     .then(stream => {
       if (!stream) {
-        status.textContent = '🚫 媒体流不可用，请检查设备权限';
+        status.textContent = '🚫 麦克风不可用，请检查设备';
         return;
       }
       localStream = stream;
-      localVideo.srcObject = stream;
-      if (!stream.getVideoTracks().length) {
-        localVideo.style.display = 'none';
-        status.textContent = '⚠️ 未检测到摄像头，仅使用マイク';
-      } else {
-        localVideo.style.display = 'block';
-        status.textContent = '✅ 设备正常';
-      }
+      localVideo.style.display = 'none'; // 隐藏本地视频元素
+      status.textContent = '✅ 麦克风正常';
     });
 
   peer.on('open', id => {
     myIdInput.value = id;
     console.log('PeerJS ID:', id);
     if (!localStream) {
-      status.textContent = '🚫 媒体流未准备好，请检查设备';
+      status.textContent = '🚫 麦克风未准备好，请检查设备';
     } else {
       status.textContent = '✅ 请将你的 ID 发给对方';
     }
@@ -54,12 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   peer.on('call', call => {
     if (!localStream) {
-      status.textContent = '🚫 本地媒体流不可用，无法接听';
+      status.textContent = '🚫 本地麦克风不可用，无法接听';
       return;
     }
     call.answer(localStream);
     call.on('stream', remoteStream => {
       remoteVideo.srcObject = remoteStream;
+      remoteVideo.style.display = remoteStream.getVideoTracks().length ? 'block' : 'none';
     });
     call.on('error', err => {
       console.error('接听错误:', err);
@@ -74,12 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     if (!localStream) {
-      alert('本地媒体流未准备好，请检查摄像头/麦克风权限');
+      alert('麦克风未准备好，请检查权限');
       return;
     }
     const call = peer.call(targetId, localStream);
     call.on('stream', remoteStream => {
       remoteVideo.srcObject = remoteStream;
+      remoteVideo.style.display = remoteStream.getVideoTracks().length ? 'block' : 'none';
     });
     call.on('error', err => {
       console.error('呼叫错误:', err);
