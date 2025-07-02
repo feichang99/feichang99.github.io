@@ -1,100 +1,101 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const peer = new Peer();
-  const remoteAudio = document.getElementById('remote-audio');
-  const myIdInput = document.getElementById('my-id');
-  const targetIdInput = document.getElementById('target-id');
-  const callBtn = document.getElementById('call-btn');
-  const playBtn = document.getElementById('play-audio-btn');
-  const debugBtn = document.getElementById('debug-audio-btn');
-  const status = document.getElementById('status');
-  let localStream;
+const joinBtn = document.getElementById('join');
+const startBtn = document.getElementById('start');
+const answerBtn = document.getElementById('answer');
+const playBtn = document.getElementById('play');
+const roomInput = document.getElementById('room');
+const status = document.getElementById('status');
+const remoteAudio = document.getElementById('remoteAudio');
 
-  navigator.mediaDevices.getUserMedia({ audio: true })
-    .then(stream => {
-      localStream = stream;
-      status.textContent = '✅ 麦克风已准备好';
-    })
-    .catch(err => {
-      status.textContent = '🚫 无法使用麦克风，请检查权限';
-    });
+let localStream;
+let peerConnection;
+let socket;
+let roomName = '';
+const config = {
+  iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
+};
 
-  peer.on('open', id => {
-    myIdInput.value = id;
-    status.textContent = localStream ? '✅ 请将你的 ID 发给对方' : '🚫 麦克风未准备';
-  });
-
-  peer.on('call', call => {
-    if (!localStream) {
-      status.textContent = '🚫 麦克风不可用，无法接听';
-      return;
-    }
-    const accept = confirm(`对方(${call.peer})请求通话，是否接听？`);
-    if (accept) {
-      status.textContent = '☎️ 正在接听...';
-      call.answer(localStream);
-      call.on('stream', remoteStream => {
-        remoteAudio.srcObject = remoteStream;
-        remoteAudio.muted = false;
-        remoteAudio.play().then(() => {
-          status.textContent = '▶️ 已自动播放远端音频';
-        }).catch(() => {
-          status.textContent = '⚠️ 需点击播放按钮';
-        });
-      });
-    } else {
-      call.close();
-    }
-  });
-
-  callBtn.onclick = () => {
-    const targetId = targetIdInput.value.trim();
-    if (!targetId) {
-      alert('请输入对方ID');
-      return;
-    }
-    if (!localStream) {
-      alert('麦克风未准备好');
-      return;
-    }
-
-    const call = peer.call(targetId, localStream);
-    call.on('stream', remoteStream => {
-      remoteAudio.srcObject = remoteStream;
-      remoteAudio.muted = false;
-      remoteAudio.play().then(() => {
-        status.textContent = '▶️ 已自动播放远端音频';
-      }).catch(() => {
-        status.textContent = '⚠️ 需点击播放按钮';
-      });
-    });
-  };
-
-  playBtn.onclick = () => {
-    if (remoteAudio.srcObject) {
-      remoteAudio.muted = false;
-      remoteAudio.play().then(() => {
-        status.textContent = '▶️ 手动播放远端音频成功';
-      }).catch(() => {
-        status.textContent = '🚫 手动播放失败，请检查音量或设备';
-      });
-    } else {
-      status.textContent = '⚠️ 当前无远端音频流';
-    }
-  };
-
-  debugBtn.onclick = () => {
-    if (!remoteAudio) {
-      status.textContent = '🚫 页面中找不到 audio 元素';
-    } else if (!remoteAudio.srcObject) {
-      status.textContent = '⚠️ 没有远端音频流传入';
-    } else {
-      status.textContent = '✅ 已接收到远端音频流，请尝试点击播放';
-    }
-  };
-
-  window.addEventListener('beforeunload', () => {
-    if (localStream) {
-      localStream.getTracks().forEach(track => track.stop());
-    }
-  });
+// 获取本地麦克风
+navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
+  localStream = stream;
+  status.textContent = '✅ 麦克风已准备';
+}).catch(err => {
+  status.textContent = '🚫 无法访问麦克风';
+  console.error(err);
 });
+
+joinBtn.onclick = () => {
+  roomName = roomInput.value.trim();
+  if (!roomName) return alert('请输入房间名');
+  socket = new WebSocket('wss://wss.signalwire.com'); // 公开 WebSocket 服务（临时可用）
+  socket.onopen = () => {
+    socket.send(JSON.stringify({ type: 'join', room: roomName }));
+    status.textContent = `🔗 已加入房间 ${roomName}`;
+    startBtn.disabled = false;
+    answerBtn.disabled = false;
+    playBtn.disabled = false;
+  };
+  socket.onmessage = async (msg) => {
+    const data = JSON.parse(msg.data);
+    if (data.type === 'offer') {
+      peerConnection = createPeer();
+      await peerConnection.setRemoteDescription(new RTCSessionDescription(data.offer));
+      const answer = await peerConnection.createAnswer();
+      await peerConnection.setLocalDescription(answer);
+      socket.send(JSON.stringify({ type: 'answer', room: roomName, answer }));
+      status.textContent = '📞 收到呼叫，点击接听';
+    }
+    if (data.type === 'answer') {
+      await peerConnection.setRemoteDescription(new RTCSessionDescription(data.answer));
+      status.textContent = '✅ 对方已接听';
+    }
+    if (data.type === 'candidate' && peerConnection) {
+      try {
+        await peerConnection.addIceCandidate(new RTCIceCandidate(data.candidate));
+      } catch (e) {
+        console.error('添加 ICE 候选失败', e);
+      }
+    }
+  };
+};
+
+startBtn.onclick = async () => {
+  peerConnection = createPeer();
+  localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+  const offer = await peerConnection.createOffer();
+  await peerConnection.setLocalDescription(offer);
+  socket.send(JSON.stringify({ type: 'offer', room: roomName, offer }));
+  status.textContent = '📤 已发送呼叫请求';
+};
+
+answerBtn.onclick = () => {
+  if (remoteAudio.srcObject) {
+    remoteAudio.muted = false;
+    remoteAudio.play();
+    status.textContent = '▶️ 正在播放远端音频';
+  } else {
+    status.textContent = '⚠️ 暂无远端音频流';
+  }
+};
+
+playBtn.onclick = () => {
+  remoteAudio.muted = false;
+  remoteAudio.play().then(() => {
+    status.textContent = '▶️ 音频播放成功';
+  }).catch(() => {
+    status.textContent = '⚠️ 请手动点击允许播放';
+  });
+};
+
+function createPeer() {
+  const pc = new RTCPeerConnection(config);
+  pc.onicecandidate = (e) => {
+    if (e.candidate) {
+      socket.send(JSON.stringify({ type: 'candidate', room: roomName, candidate: e.candidate }));
+    }
+  };
+  pc.ontrack = (e) => {
+    remoteAudio.srcObject = e.streams[0];
+    status.textContent = '✅ 收到远端音频';
+  };
+  return pc;
+}

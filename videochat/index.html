@@ -1,43 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🎤 PeerJS 语音聊天</title>
+  <meta charset="UTF-8">
+  <title>🔊 WebRTC 语音聊天</title>
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
-      background-color: #f0f2f5;
-      color: #333;
+      font-family: sans-serif;
+      background: #f2f2f2;
       padding: 20px;
-      max-width: 700px;
+      max-width: 600px;
       margin: auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    label {
-      display: block;
-      margin: 10px 0 5px;
-    }
-    input {
-      padding: 8px;
-      font-size: 1em;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    button {
-      margin-top: 10px;
+    input, button {
       padding: 10px;
       font-size: 1em;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    button:hover {
-      background-color: #45a049;
+      margin: 5px 0;
     }
     #status {
       margin-top: 10px;
@@ -46,18 +23,16 @@
   </style>
 </head>
 <body>
-  <h2>🎤 PeerJS 语音聊天</h2>
+  <h2>🔊 WebRTC 语音聊天</h2>
+  <label>请输入房间名：<input id="room" placeholder="如 myroom" /></label><br>
+  <button id="join">加入房间</button>
+  <button id="start" disabled>📞 呼叫</button>
+  <button id="answer" disabled>✅ 接听</button>
+  <button id="play" disabled>▶️ 播放音频</button>
+  <p id="status">等待操作...</p>
 
-  <label>你的 ID：<input id="my-id" readonly></label>
-  <label>对方 ID：<input id="target-id" placeholder="请输入对方ID"></label>
-  <button id="call-btn">📞 呼叫</button>
-  <p id="status">⏳ 初始化中...</p>
+  <audio id="remoteAudio" autoplay></audio>
 
-  <audio id="remote-audio" autoplay></audio>
-  <button id="play-audio-btn">▶️ 点击播放远端音频</button>
-  <button id="debug-audio-btn">🔧 测试远端音频是否有效</button>
-
-  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
-  <script defer src="script.js"></script>
+  <script src="client.js"></script>
 </body>
 </html>
