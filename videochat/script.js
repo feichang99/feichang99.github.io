@@ -12,7 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return navigator.mediaDevices.getUserMedia({ video: true, audio: true })
       .catch(err => {
         console.warn('摄像头不可用，尝试只用麦克风:', err);
-        return navigator.mediaDevices.getUserMedia({ video: false, audio: true });
+        if (err.name === 'NotReadableError' || err.name === 'NotAllowedError') {
+          return navigator.mediaDevices.getUserMedia({ video: false, audio: true })
+            .catch(audioErr => {
+              console.error('麦克风也无法访问:', audioErr);
+              throw audioErr; // Rethrow to handle in the main catch block
+            });
+        }
+        throw err; // Rethrow other errors
       });
   }
 
@@ -29,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
     .catch(err => {
-      console.error('访问摄像头和麦克风失败:', err);
+      console.error('访问媒体设备失败:', err);
       status.textContent = '🚫 无法访问摄像头和麦克风';
     });
 
@@ -39,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   peer.on('call', call => {
+    if (!localStream) {
+      status.textContent = '🚫 本地媒体流不可用，无法接听';
+      return;
+    }
     call.answer(localStream);
     call.on('stream', remoteStream => {
       remoteVideo.srcObject = remoteStream;
