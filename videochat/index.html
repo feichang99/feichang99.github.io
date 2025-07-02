@@ -3,29 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🎧 PeerJS 纯音频聊天</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>🎥 PeerJS 语音聊天</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input {
+      padding: 8px;
+      font-size: 1em;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 1em;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #status {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h2>🎧 PeerJS 纯音频聊天</h2>
-    <div class="panel">
-      <label>你的 ID：<input id="my-id" readonly /></label>
-      <label>对方 ID：<input id="target-id" /></label>
-      <button id="call-btn">📞 呼叫</button>
-      <p id="status">⏳ 初始化中...</p>
-    </div>
-    <div class="audios">
-      <div>
-        <p>🎤 你（麦克风）</p>
-        <audio id="local-audio" autoplay muted></audio>
-      </div>
-      <div>
-        <p>🎧 对方</p>
-        <audio id="remote-audio" autoplay></audio>
-      </div>
-    </div>
-  </div>
+  <h2>🎥 PeerJS 语音聊天</h2>
+
+  <label>你的 ID：<input id="my-id" readonly></label>
+  <label>对方 ID：<input id="target-id" placeholder="请输入对方ID"></label>
+  <button id="call-btn">📞 呼叫</button>
+  <p id="status">⏳ 初始化中...</p>
+
+  <audio id="remote-audio" autoplay style="width: 100%; margin-top: 20px;"></audio>
+  <button id="play-audio-btn" style="margin-top: 10px;">点击开始播放音频</button>
 
   <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
   <script defer src="script.js"></script>
