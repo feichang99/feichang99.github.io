@@ -1,27 +1,45 @@
 let
-    // 设置包含TXT文件的文件夹路径
-    文件夹路径 = "D:\Desktop\10",  // ← 替换为你自己的路径
+    // 1) 路径
+    文件夹路径 = "D:\\Desktop\\10",
 
-    // 获取文件夹中所有 .txt 文件
-    文件列表 = Folder.Files(文件夹路径),
-    仅TXT = Table.SelectRows(文件列表, each Text.EndsWith([Extension], ".txt")),
+    // 2) 取出 .txt（忽略大小写）
+    源 = Folder.Files(文件夹路径),
+    仅TXT = Table.SelectRows(源, each Text.Lower([Extension]) = ".txt"),
 
-    // 读取每个文件的内容并解析为表格   
-    添加表格列 = Table.AddColumn(仅TXT, "表格", each 
+    // 3) 从文件名提取首段数字作为排序数字
+    添加排序数字 = Table.AddColumn(仅TXT, "排序数字", each
         let
-            内容 = Text.FromBinary([Content], TextEncoding.Utf8) ,  // 内容 = Text.FromBinary([Content], 936)
+            名 = [Name],
+            数字或空格 = List.Transform(Text.ToList(名),
+                (c) => if List.Contains({"0","1","2","3","4","5","6","7","8","9"}, c) then c else " "),
+            串 = Text.Combine(数字或空格),
+            段 = List.Select(Text.Split(串, " "), each _ <> ""),
+            首数字文本 = if List.Count(段) > 0 then 段{0} else null,
+            值 = try Number.FromText(首数字文本) otherwise null
+        in
+            值
+    , type number),
+
+    // 4) 空的排后面
+    排序键 = Table.ReplaceValue(添加排序数字, null, 1.0e12, Replacer.ReplaceValue, {"排序数字"}),
+
+    // 5) 排序
+    排序后 = Table.Sort(排序键, {{"排序数字", Order.Ascending}, {"Name", Order.Ascending}}),
+
+    // 6) 读取并按空格拆分
+    添加表格列 = Table.AddColumn(排序后, "表格", each 
+        let
+            内容 = Text.FromBinary([Content], 936),   // 936=GBK
             行列表 = Lines.FromText(内容),
-            拆分列 = List.Transform(行列表, each Text.Split(_, " ")),
-            表格 = Table.FromRows(拆分列)
+            拆分 = List.Transform(行列表, each Text.Split(_, " ")),
+            表格 = Table.FromRows(拆分)
         in
             表格
     ),
 
-    // 仅保留“表格列”
-    仅表格 = 添加表格列[表格],
-
-    // 合并所有表格（按列横向连接）
-    合并表 = List.Zip(List.Transform(仅表格, each Table.ToRows(_))),
+    // 7) 横向拼接所有文件
+    所有表 = 添加表格列[表格],
+    合并表 = List.Zip(List.Transform(所有表, each Table.ToRows(_))),
     最终行 = List.Transform(合并表, each List.Combine(_)),
     最终表格 = Table.FromRows(最终行)
 in
