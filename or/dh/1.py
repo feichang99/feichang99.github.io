@@ -78,109 +78,114 @@ cccg21=0 ; cccg22=0 ; cccg23=0 ; cccg24=0 ; cccg25=0 ; cccg26=0 ; cccg27=0 ; ccc
 
 
 #--
-aaa1=	6	;	bbb1=	9	;	ccc1=	1
-aaa2=	8	;	bbb2=	7	;	ccc2=	6
-aaa3=	7	;	bbb3=	2	;	ccc3=	6
-aaa4=	9	;	bbb4=	8	;	ccc4=	0
-aaa5=	7	;	bbb5=	3	;	ccc5=	4
-aaa6=	0	;	bbb6=	5	;	ccc6=	7
-aaa7=	8	;	bbb7=	9	;	ccc7=	8
-aaa8=	9	;	bbb8=	4	;	ccc8=	3
-aaa9=	0	;	bbb9=	1	;	ccc9=	5
-aaa10=	8	;	bbb10=	4	;	ccc10=	6
-aaa11=	9	;	bbb11=	5	;	ccc11=	3
-aaa12=	0	;	bbb12=	1	;	ccc12=	3
-aaa13=	0	;	bbb13=	0	;	ccc13=	7
-aaa14=	9	;	bbb14=	2	;	ccc14=	0
+aaa1=	2	;	bbb1=	2	;	ccc1=	2
+aaa2=	6	;	bbb2=	6	;	ccc2=	6
+aaa3=	6	;	bbb3=	6	;	ccc3=	6
+aaa4=	8	;	bbb4=	8	;	ccc4=	8
+aaa5=	4	;	bbb5=	4	;	ccc5=	4
+aaa6=	4	;	bbb6=	4	;	ccc6=	4
+aaa7=	0	;	bbb7=	0	;	ccc7=	0
+aaa8=	6	;	bbb8=	6	;	ccc8=	6
+aaa9=	4	;	bbb9=	4	;	ccc9=	4
+aaa10=	2	;	bbb10=	2	;	ccc10=	2
+aaa11=	2	;	bbb11=	2	;	ccc11=	2
+aaa12=	8	;	bbb12=	8	;	ccc12=	8
+aaa13=	2	;	bbb13=	2	;	ccc13=	2
+aaa14=	0	;	bbb14=	0	;	ccc14=	0
 aaa15=	4	;	bbb15=	4	;	ccc15=	4
-aaa16=	2	;	bbb16=	5	;	ccc16=	5
-aaa17=	4	;	bbb17=	3	;	ccc17=	2
-aaa18=	3	;	bbb18=	8	;	ccc18=	7
-aaa19=	5	;	bbb19=	2	;	ccc19=	0
-aa1=	8	;	bb1=	9	;	cc1=	7
-aa2=	4	;	bb2=	5	;	cc2=	6
-aa3=	3	;	bb3=	8	;	cc3=	1
-aa4=	9	;	bb4=	2	;	cc4=	0
-aa5=	8	;	bb5=	5	;	cc5=	3
-aa6=	6	;	bb6=	2	;	cc6=	5
-aa7=	8	;	bb7=	9	;	cc7=	4
-aa8=	5	;	bb8=	2	;	cc8=	6
-aa9=	9	;	bb9=	0	;	cc9=	0
-aa10=	5	;	bb10=	3	;	cc10=	6
-aa11=	2	;	bb11=	9	;	cc11=	6
-aa12=	0	;	bb12=	1	;	cc12=	0
-aa13=	7	;	bb13=	3	;	cc13=	6
-aa14=	9	;	bb14=	9	;	cc14=	0
-aa15=	8	;	bb15=	0	;	cc15=	6
-aa16=	1	;	bb16=	8	;	cc16=	0
-aa17=	6	;	bb17=	1	;	cc17=	1
-aa18=	4	;	bb18=	6	;	cc18=	5
-aa19=	1	;	bb19=	0	;	cc19=	8
-a1=	4	;	b1=	3	;	c1=	9
-a2=	7	;	b2=	3	;	c2=	2
-a3=	0	;	b3=	4	;	c3=	4
-a4=	2	;	b4=	5	;	c4=	9
-a5=	6	;	b5=	2	;	c5=	0
-a6=	9	;	b6=	6	;	c6=	9
-a7=	3	;	b7=	5	;	c7=	5
-a8=	5	;	b8=	9	;	c8=	0
-a9=	8	;	b9=	6	;	c9=	0
-a10=	1	;	b10=	2	;	c10=	5
-a11=	4	;	b11=	1	;	c11=	9
-a12=	1	;	b12=	6	;	c12=	0
-a13=	9	;	b13=	9	;	c13=	0
-a14=	1	;	b14=	7	;	c14=	6
-a15=	6	;	b15=	7	;	c15=	3
-a16=	8	;	b16=	4	;	c16=	8
-a17=	9	;	b17=	9	;	c17=	7
-a18=	2	;	b18=	6	;	c18=	2
-a19=	5	;	b19=	2	;	c19=	6
-a20=	9	;	b20=	5	;	c20=	2
-#--
-k = [5, 3, 7, 9, 2, 0, 8, 1, 4, 6]
+aaa16=	2	;	bbb16=	2	;	ccc16=	2
+aaa17=	6	;	bbb17=	6	;	ccc17=	6
+aaa18=	8	;	bbb18=	8	;	ccc18=	8
+aaa19=	0	;	bbb19=	0	;	ccc19=	0
+aa1=	8	;	bb1=	8	;	cc1=	8
+aa2=	0	;	bb2=	0	;	cc2=	0
+aa3=	8	;	bb3=	8	;	cc3=	8
+aa4=	0	;	bb4=	0	;	cc4=	0
+aa5=	0	;	bb5=	0	;	cc5=	0
+aa6=	4	;	bb6=	4	;	cc6=	4
+aa7=	2	;	bb7=	2	;	cc7=	2
+aa8=	4	;	bb8=	4	;	cc8=	4
+aa9=	8	;	bb9=	8	;	cc9=	8
+aa10=	4	;	bb10=	4	;	cc10=	4
+aa11=	8	;	bb11=	8	;	cc11=	8
+aa12=	6	;	bb12=	6	;	cc12=	6
+aa13=	8	;	bb13=	8	;	cc13=	8
+aa14=	2	;	bb14=	2	;	cc14=	2
+aa15=	0	;	bb15=	0	;	cc15=	0
+aa16=	8	;	bb16=	8	;	cc16=	8
+aa17=	6	;	bb17=	6	;	cc17=	6
+aa18=	4	;	bb18=	4	;	cc18=	4
+aa19=	4	;	bb19=	4	;	cc19=	4
+a1=	0	;	b1=	0	;	c1=	0
+a2=	2	;	b2=	2	;	c2=	2
+a3=	6	;	b3=	6	;	c3=	6
+a4=	8	;	b4=	8	;	c4=	8
+a5=	4	;	b5=	4	;	c5=	4
+a6=	6	;	b6=	6	;	c6=	6
+a7=	8	;	b7=	8	;	c7=	8
+a8=	2	;	b8=	2	;	c8=	2
+a9=	8	;	b9=	8	;	c9=	8
+a10=	4	;	b10=	4	;	c10=	4
+a11=	0	;	b11=	0	;	c11=	0
+a12=	2	;	b12=	2	;	c12=	2
+a13=	4	;	b13=	4	;	c13=	4
+a14=	8	;	b14=	8	;	c14=	8
+a15=	6	;	b15=	6	;	c15=	6
+a16=	6	;	b16=	6	;	c16=	6
+a17=	6	;	b17=	6	;	c17=	6
+a18=	0	;	b18=	0	;	c18=	0
+a19=	4	;	b19=	4	;	c19=	4
+a20=	0	;	b20=	0	;	c20=	0
 
-z=249
 
-while g < 5000001:
+
+#--1-2-----(2)
+
+z=273
+numbers  = [0,4,6,8,2]
+bnumbers = [0,4,6,8,2]
+cnumbers = [0,4,6,8,2]
+while g < 15:
     jz1=5000000000-g
     h = h + 1
     g = g + 1
-    za1   = (random.choice([0, 3, 5, 7, 2, 6, 9, 1, 4, 8]))
-    #za2   = (random.choice([6, 3, 2, 0, 1, 9, 8, 5, 4, 7]))
-    #za3   = (random.choice([6, 3, 2, 0, 1, 9, 8, 5, 4, 7]))
-    #za4   = (random.choice([6, 3, 2, 0, 1, 9, 8, 5, 4, 7]))
-    #za5   = (random.choice([6, 3, 2, 0, 1, 9, 8, 5, 4, 7]))
-    zzz =[za1,100]
-    zzz.sort()
-    qq1,qq2=zzz
-    qq=qq1,qq2
-    qqq=qq
-
-
-    bza1   = (random.choice([8, 4, 1, 7, 9, 0, 3, 5, 6, 2]))
-    #bza2   = (random.choice([0,1,2,3,4,5,6,7,8,9]))
-    #bza3   = (random.choice([0,1,2,3,4,5,6,7,8,9]))
-    #bza4   = (random.choice([0,1,2,3,4,5,6,7,8,9]))
-    #bza5   = (random.choice([0,1,2,3,4,5,6,7,8,9]))
-
-    bzzz =[bza1,200]
-    bzzz.sort()
-    bqq1,bqq2=bzzz
-    bqq=bqq1,bqq2
-    bqqq=bqq
-
-
-    cza1   = (random.choice([5, 0, 8, 6, 4, 9, 1, 7, 2, 3]))
-    #cza2   = (random.choice([4, 8, 1, 6, 2, 9, 3, 5, 0, 7]))
-    #cza3   = (random.choice([4, 8, 1, 6, 2, 9, 3, 5, 0, 7]))
-    #cza4   = (random.choice([4, 8, 1, 6, 2, 9, 3, 5, 0, 7]))
-    #cza5   = (random.choice([4, 8, 1, 6, 2, 9, 3, 5, 0, 7]))
     
-    czzz =[cza1,300]
+    
+    
+    aaaaa = random.sample(numbers, 3)
+    [za1,za2,za3]=aaaaa
+    #g11 =[az1,aaz1,aaaz1,az2]
+    zzz =[za1,za2,za3]
+    zzz.sort()
+    qq1,qq2,qq3=zzz
+    qq=qq1,qq2,qq3
+    qqq=qq
+    
+    
+    
+    baaaaa = random.sample(bnumbers, 3)
+    [bza1,bza2,bza3]=baaaaa
+    #g11 =[az1,aaz1,aaaz1,az2]
+    bzzz =[bza1,bza2,bza3]
+    bzzz.sort()
+    bqq1,bqq2,bqq3=bzzz
+    bqq=bqq1,bqq2,bqq3
+    bqqq=bqq
+    
+    
+    
+    caaaaa = random.sample(cnumbers, 3)
+    [cza1,cza2,cza3]=caaaaa
+    #g11 =[az1,aaz1,aaaz1,az2]
+    czzz =[cza1,cza2,cza3]
     czzz.sort()
-    cqq1,cqq2=czzz
-    cqq=cqq1,cqq2
+    cqq1,cqq2,cqq3=czzz
+    cqq=cqq1,cqq2,cqq3
     cqqq=cqq
+    
+
+    
+    
 
 # ---
 
@@ -188,7 +193,7 @@ while g < 5000001:
     cgg12=0
     if cgg11==1:
         daa5=open(r'c12.txt','a+')
-        print(f"{z+12}C",'%02d %02d ' %cqq,*cg32,g,'',file=daa5)
+        print(f"{z+12}CB",'%02d %02d %02d ' %cqq,*cg32,g,'',file=daa5)
         daa5.close()
         cg33=cg32
         cgg12=1
@@ -198,7 +203,7 @@ while g < 5000001:
     if cgg10==1:
         
         daa5=open(r'c11.txt','a+')
-        print(f"{z+11}C",'%02d %02d ' %cqq,*cg31,g,'',file=daa5)
+        print(f"{z+11}CB",'%02d %02d %02d ' %cqq,*cg31,g,'',file=daa5)
         daa5.close()
         cg32=cg31
         cgg11=1
@@ -207,7 +212,7 @@ while g < 5000001:
     cgg10=0
     if cgg9==1:
         daa5=open(r'c10.txt','a+')
-        print(f"{z+10}C",'%02d %02d ' %cqq,*cg30,g,'',file=daa5)
+        print(f"{z+10}CB",'%02d %02d %02d ' %cqq,*cg30,g,'',file=daa5)
         daa5.close()
         cg31=cg30
         cgg10=1
@@ -216,7 +221,7 @@ while g < 5000001:
     cgg9=0
     if cgg8==1:
         daa5=open(r'c9.txt','a+')
-        print(f"{z+9}C",'%02d %02d ' %cqq,*cg29,g,'',file=daa5)
+        print(f"{z+9}CB",'%02d %02d %02d ' %cqq,*cg29,g,'',file=daa5)
         daa5.close()
         cg30=cg29
         cgg9=1
@@ -225,7 +230,7 @@ while g < 5000001:
     cgg8=0
     if cgg7==1:
         daa5=open(r'c8.txt','a+')
-        print(f"{z+8}C",'%02d %02d ' %cqq,*cg28,g,'',file=daa5)
+        print(f"{z+8}CB",'%02d %02d %02d ' %cqq,*cg28,g,'',file=daa5)
         daa5.close()
         cg29=cg28
         cgg8=1
@@ -234,7 +239,7 @@ while g < 5000001:
     cgg7=0
     if cgg6==1:
         daa5=open(r'c7.txt','a+')
-        print(f"{z+7}C",'%02d %02d ' %cqq,*cg27,g,'',file=daa5)
+        print(f"{z+7}CB",'%02d %02d %02d ' %cqq,*cg27,g,'',file=daa5)
         daa5.close()
         cg28=cg27
         cgg7=1
@@ -243,7 +248,7 @@ while g < 5000001:
     cgg6=0
     if cgg5==1:
         daa5=open(r'c6.txt','a+')
-        print(f"{z+6}C",'%02d %02d ' %cqq,*cg26,g,'',file=daa5)
+        print(f"{z+6}CB",'%02d %02d %02d ' %cqq,*cg26,g,'',file=daa5)
         daa5.close()
         cg27=cg26
         cgg6=1
@@ -252,7 +257,7 @@ while g < 5000001:
     cgg5=0
     if cgg4==1:
         daa5=open(r'c5.txt','a+')
-        print(f"{z+5}C",'%02d %02d ' %cqq,*cg25,g,'',file=daa5)
+        print(f"{z+5}CB",'%02d %02d %02d ' %cqq,*cg25,g,'',file=daa5)
         daa5.close()
         cg26=cg25
         cgg5=1
@@ -261,7 +266,7 @@ while g < 5000001:
     cgg4=0
     if cgg3==1:
         daa5=open(r'c4.txt','a+')
-        print(f"{z+4}C",'%02d %02d ' %cqq,*cg24,g,'',file=daa5)
+        print(f"{z+4}CB",'%02d %02d %02d ' %cqq,*cg24,g,'',file=daa5)
         daa5.close()
         cg25=cg24
         cgg4=1
@@ -270,7 +275,7 @@ while g < 5000001:
     cgg3=0
     if cgg2==1:
         daa5=open(r'c3.txt','a+')
-        print(f"{z+3}C",'%02d %02d ' %cqq,*cg23,g,'',file=daa5)
+        print(f"{z+3}CB",'%02d %02d %02d ' %cqq,*cg23,g,'',file=daa5)
         daa5.close()
         cg24=cg23
         cgg3=1
@@ -280,20 +285,20 @@ while g < 5000001:
     cgg2=0
     if cgg1==1:
         daa5=open(r'c2.txt','a+')
-        print(f"{z+2}C",'%02d %02d ' %cqq,*cg22,g,'',file=daa5)
+        print(f"{z+2}CB",'%02d %02d %02d ' %cqq,*cg22,g,'',file=daa5)
         daa5.close()
         cg23=cg22
         cgg2=1
 
     cg22=0
     cgg1=0
-    if cg20 > 4:
+    if cg20 > 0 and g< 10:
         #daa5=open(r'c1.txt','a+')
         uuid = random.randint(10000, 99999)
         cg22 = cg21,uuid
         with open(r"c1.txt", "a+", encoding="utf-8") as f:
-            print(f"{z+1}C",'%02d %02d ' %cqq,*cg22,g,'',file=f)
-        #print(f"{z+1}C",'%02d %02d ' %cqq,*cg22,g,'',file=daa5)
+            print(f"{z+1}CB",'%02d %02d %02d ' %cqq,*cg22,g,'',file=f)
+        #print(f"{z+1}CB",'%02d %02d %02d ' %cqq,*cg22,g,'',file=daa5)
         #daa5.close()
         #cg22=cg21
         cgg1=1
@@ -305,7 +310,7 @@ while g < 5000001:
     bgg12=0
     if bgg11==1:
         daa5=open(r'b12.txt','a+')
-        print(f"{z+12}B",'%02d %02d ' %bqq,*bg32,g,'',file=daa5)
+        print(f"{z+12}BB",'%02d %02d %02d ' %bqq,*bg32,g,'',file=daa5)
         daa5.close()
         bg33=bg32
         bgg12=1
@@ -314,7 +319,7 @@ while g < 5000001:
     bgg11=0
     if bgg10==1:
         daa5=open(r'b11.txt','a+')
-        print(f"{z+11}B",'%02d %02d ' %bqq,*bg31,g,'',file=daa5)
+        print(f"{z+11}BB",'%02d %02d %02d ' %bqq,*bg31,g,'',file=daa5)
         daa5.close()
         bg32=bg31
         bgg11=1
@@ -323,7 +328,7 @@ while g < 5000001:
     bgg10=0
     if bgg9==1:
         daa5=open(r'b10.txt','a+')
-        print(f"{z+10}B",'%02d %02d ' %bqq,*bg30,g,'',file=daa5)
+        print(f"{z+10}BB",'%02d %02d %02d ' %bqq,*bg30,g,'',file=daa5)
         daa5.close()
         bg31=bg30
         bgg10=1
@@ -332,7 +337,7 @@ while g < 5000001:
     bgg9=0
     if bgg8==1:
         daa5=open(r'b9.txt','a+')
-        print(f"{z+9}B",'%02d %02d ' %bqq,*bg29,g,'',file=daa5)
+        print(f"{z+9}BB",'%02d %02d %02d ' %bqq,*bg29,g,'',file=daa5)
         daa5.close()
         bg30=bg29
         bgg9=1
@@ -341,7 +346,7 @@ while g < 5000001:
     bgg8=0
     if bgg7==1:
         daa5=open(r'b8.txt','a+')
-        print(f"{z+8}B",'%02d %02d ' %bqq,*bg28,g,'',file=daa5)
+        print(f"{z+8}BB",'%02d %02d %02d ' %bqq,*bg28,g,'',file=daa5)
         daa5.close()
         bg29=bg28
         bgg8=1
@@ -350,7 +355,7 @@ while g < 5000001:
     bgg7=0
     if bgg6==1:
         daa5=open(r'b7.txt','a+')
-        print(f"{z+7}B",'%02d %02d ' %bqq,*bg27,g,'',file=daa5)
+        print(f"{z+7}BB",'%02d %02d %02d ' %bqq,*bg27,g,'',file=daa5)
         daa5.close()
         bg28=bg27
         bgg7=1
@@ -359,7 +364,7 @@ while g < 5000001:
     bgg6=0
     if bgg5==1:
         daa5=open(r'b6.txt','a+')
-        print(f"{z+6}B",'%02d %02d ' %bqq,*bg26,g,'',file=daa5)
+        print(f"{z+6}BB",'%02d %02d %02d ' %bqq,*bg26,g,'',file=daa5)
         daa5.close()
         bg27=bg26
         bgg6=1
@@ -368,7 +373,7 @@ while g < 5000001:
     bgg5=0
     if bgg4==1:
         daa5=open(r'b5.txt','a+')
-        print(f"{z+5}B",'%02d %02d ' %bqq,*bg25,g,'',file=daa5)
+        print(f"{z+5}BB",'%02d %02d %02d ' %bqq,*bg25,g,'',file=daa5)
         daa5.close()
         bg26=bg25
         bgg5=1
@@ -377,7 +382,7 @@ while g < 5000001:
     bgg4=0
     if bgg3==1:
         daa5=open(r'b4.txt','a+')
-        print(f"{z+4}B",'%02d %02d ' %bqq,*bg24,g,'',file=daa5)
+        print(f"{z+4}BB",'%02d %02d %02d ' %bqq,*bg24,g,'',file=daa5)
         daa5.close()
         bg25=bg24
         bgg4=1
@@ -386,7 +391,7 @@ while g < 5000001:
     bgg3=0
     if bgg2==1:
         daa5=open(r'b3.txt','a+')
-        print(f"{z+3}B",'%02d %02d ' %bqq,*bg23,g,'',file=daa5)
+        print(f"{z+3}BB",'%02d %02d %02d ' %bqq,*bg23,g,'',file=daa5)
         daa5.close()
         bg24=bg23
         bgg3=1
@@ -396,21 +401,21 @@ while g < 5000001:
     bgg2=0
     if bgg1==1:
         daa5=open(r'b2.txt','a+')
-        print(f"{z+2}B",'%02d %02d ' %bqq,*bg22,g,'',file=daa5)
+        print(f"{z+2}BB",'%02d %02d %02d ' %bqq,*bg22,g,'',file=daa5)
         daa5.close()
         bg23=bg22
         bgg2=1
 
     bg22=0
     bgg1=0
-    if bg20 > 4:
+    if bg20 > 0 and g< 10:
         
         #daa5=open(r'b1.txt','a+')
         uuid = random.randint(10000, 99999)
         bg22 = bg21,uuid
         with open(r"b1.txt", "a+", encoding="utf-8") as f:
-            print(f"{z+1}B",'%02d %02d ' %bqq,*bg22,g,'',file=f)
-        #print(f"{z+1}B",'%02d %02d ' %bqq,*bg22,g,'',file=daa5)
+            print(f"{z+1}BB",'%02d %02d %02d ' %bqq,*bg22,g,'',file=f)
+        #print(f"{z+1}BB",'%02d %02d %02d ' %bqq,*bg22,g,'',file=daa5)
         #daa5.close()
         #bg22=bg21  bg20 > 1  and g < 20:
         bgg1=1
@@ -422,7 +427,7 @@ while g < 5000001:
     agg12=0
     if agg11==1:
         daa5=open(r'a12.txt','a+')
-        print(f"{z+12}A",'%02d %02d ' %qq,*ag32,g,'',file=daa5)
+        print(f"{z+12}A",'%02d %02d %02d ' %qq,*ag32,g,'',file=daa5)
         daa5.close()
         ag33=ag32
         agg12=1
@@ -431,7 +436,7 @@ while g < 5000001:
     agg11=0
     if agg10==1:
         daa5=open(r'a11.txt','a+')
-        print(f"{z+11}A",'%02d %02d ' %qq,*ag31,g,'',file=daa5)
+        print(f"{z+11}A",'%02d %02d %02d ' %qq,*ag31,g,'',file=daa5)
         daa5.close()
         ag32=ag31
         agg11=1
@@ -440,7 +445,7 @@ while g < 5000001:
     agg10=0
     if agg9==1:
         daa5=open(r'a10.txt','a+')
-        print(f"{z+10}A",'%02d %02d ' %qq,*ag30,g,'',file=daa5)
+        print(f"{z+10}A",'%02d %02d %02d ' %qq,*ag30,g,'',file=daa5)
         daa5.close()
         ag31=ag30
         agg10=1
@@ -449,7 +454,7 @@ while g < 5000001:
     agg9=0
     if agg8==1:
         daa5=open(r'a9.txt','a+')
-        print(f"{z+9}A",'%02d %02d ' %qq,*ag29,g,'',file=daa5)
+        print(f"{z+9}A",'%02d %02d %02d ' %qq,*ag29,g,'',file=daa5)
         daa5.close()
         ag30=ag29
         agg9=1
@@ -458,7 +463,7 @@ while g < 5000001:
     agg8=0
     if agg7==1:
         daa5=open(r'a8.txt','a+')
-        print(f"{z+8}A",'%02d %02d ' %qq,*ag28,g,'',file=daa5)
+        print(f"{z+8}A",'%02d %02d %02d ' %qq,*ag28,g,'',file=daa5)
         daa5.close()
         ag29=ag28
         agg8=1
@@ -467,7 +472,7 @@ while g < 5000001:
     agg7=0
     if agg6==1:
         daa5=open(r'a7.txt','a+')
-        print(f"{z+7}A",'%02d %02d ' %qq,*ag27,g,'',file=daa5)
+        print(f"{z+7}A",'%02d %02d %02d ' %qq,*ag27,g,'',file=daa5)
         daa5.close()
         ag28=ag27
         agg7=1
@@ -476,7 +481,7 @@ while g < 5000001:
     agg6=0
     if agg5==1:
         daa5=open(r'a6.txt','a+')
-        print(f"{z+6}A",'%02d %02d ' %qq,*ag26,g,'',file=daa5)
+        print(f"{z+6}A",'%02d %02d %02d ' %qq,*ag26,g,'',file=daa5)
         daa5.close()
         ag27=ag26
         agg6=1
@@ -485,7 +490,7 @@ while g < 5000001:
     agg5=0
     if agg4==1:
         daa5=open(r'a5.txt','a+')
-        print(f"{z+5}A",'%02d %02d ' %qq,*ag25,g,'',file=daa5)
+        print(f"{z+5}A",'%02d %02d %02d ' %qq,*ag25,g,'',file=daa5)
         daa5.close()
         ag26=ag25
         agg5=1
@@ -494,7 +499,7 @@ while g < 5000001:
     agg4=0
     if agg3==1:
         daa5=open(r'a4.txt','a+')
-        print(f"{z+4}A",'%02d %02d ' %qq,*ag24,g,'',file=daa5)
+        print(f"{z+4}A",'%02d %02d %02d ' %qq,*ag24,g,'',file=daa5)
         daa5.close()
         ag25=ag24
         agg4=1
@@ -503,7 +508,7 @@ while g < 5000001:
     agg3=0
     if agg2==1:
         daa5=open(r'a3.txt','a+')
-        print(f"{z+3}A",'%02d %02d ' %qq,*ag23,g,'',file=daa5)
+        print(f"{z+3}A",'%02d %02d %02d ' %qq,*ag23,g,'',file=daa5)
         daa5.close()
         ag24=ag23
         agg3=1
@@ -513,46 +518,46 @@ while g < 5000001:
     agg2=0
     if agg1==1:
         daa5=open(r'a2.txt','a+')
-        print(f"{z+2}A",'%02d %02d ' %qq,*ag22,g,'',file=daa5)
+        print(f"{z+2}A",'%02d %02d %02d ' %qq,*ag22,g,'',file=daa5)
         daa5.close()
         ag23=ag22
         agg2=1
 
     ag22=0
     agg1=0
-    if ag20 > 4:
+    if ag20 > 0 and g< 10:
         #daa5=open(r'a1.txt','a+')
         uuid = random.randint(10000, 99999)
         ag22 = ag21,uuid
-        #print(f"{z+1}A",'%02d %02d ' %qq,*ag22,g,'',file=daa5)
+        #print(f"{z+1}A",'%02d %02d %02d ' %qq,*ag22,g,'',file=daa5)
         with open(r"a1.txt", "a+", encoding="utf-8") as f:
-            print(f"{z+1}A",'%02d %02d ' %qq,*ag22,g,'',file=f)
+            print(f"{z+1}A",'%02d %02d %02d ' %qq,*ag22,g,'',file=f)
         #daa5.close()
         #ag22=ag21
         agg1=1
         uuid=0
 
 # -----
-    if ag20 > 5:
+    if ag20 > 4 and g< 10:
         
         with open("EA1.txt", "a+", encoding="utf-8") as f:
-            print(f"{z+1}A",'%02d %02d ' %qq,'-1-',*ag22,g,file=f)
+            print(f"{z+1}A",'%02d %02d %02d ' %qq,'-1-',*ag22,g,file=f)
         
         
 
 
-    if bg20 > 5:
+    if bg20 > 4 and g< 10:
         
         with open("EB1.txt", "a+", encoding="utf-8") as f:
-            print(f"{z+1}B",'%02d %02d ' %bqq,'-2-',*bg22,g,file=f)
+            print(f"{z+1}BB",'%02d %02d %02d ' %bqq,'-2-',*bg22,g,file=f)
         
         
 
 
-    if cg20 > 5:
+    if cg20 > 4 and g< 10:
         
         with open("EC1.txt", "a+", encoding="utf-8") as f:
-            print(f"{z+1}C",'%02d %02d ' %cqq,'-3-',*cg22,g,file=f)
+            print(f"{z+1}CB",'%02d %02d %02d ' %cqq,'-3-',*cg22,g,file=f)
         
   
 # ---
@@ -1286,47 +1291,54 @@ while g < 5000001:
         #print(h,"--------",g,"--------",jz1)
         daaA2=open(r'A.txt','a+')
         #print('-----------,*z+,g,'例',file=daa2)
-        print(f"{z+1}A",'%02d %02d ' %qq,'例',g,'A---A ',file=daaA2)
+        print(f"{z+1}A",'%02d %02d %02d ' %qq,'例',g,'A---A ',file=daaA2)
         daaA2.close()
 
     if g <=100:
         with open(r"D1.txt", "a+", encoding="utf-8") as f:
-            print(f"{z+1}A",'%02d %02d ' %qq,'-1-',ag20,'例',g,'A---A ',file=f)
+            print(f"{z+1}A",'%02d %02d %02d ' %qq,'-1-',ag20,'例',g,'A---A ',file=f)
 
         #print('--------------2000000:')
         #print(h,"--------",g,"--------",jz1)
         #daaA2=open(r'D1.txt','a+')
         #print('-----------,*z+,g,'例',file=daa2)
-        #print(f"{z+1}A",'%02d %02d ' %qq,ag20,'例',g,'A---A ',file=daaA2)
+        #print(f"{z+1}A",'%02d %02d %02d ' %qq,ag20,'例',g,'A---A ',file=daaA2)
         #daaA2.close()
 
 
-    if g <=100:
+    if g <=101:
         
         with open(r"D2.txt", "a+", encoding="utf-8") as f:
             
-            print(f"{z+1}B",'%02d %02d ' %bqq,'-2-',bg20,'例',g,'B---B ',file=f)
+            print(f"{z+1}BB",'%02d %02d %02d ' %bqq,'-2-',bg20,'例',g,'B---B ',file=f)
         
            #print('--------------2000000:')
            #print(h,"--------",g,"--------",jz1)
            #daaA2=open(r'D2.txt','a+')
            #print('-----------,*z+,g,'例',file=daa2)
-           #print(f"{z+1}B",'%02d %02d ' %bqq,bg20,'例',g,'B---B ',file=daaA2)
+           #print(f"{z+1}BB",'%02d %02d %02d ' %bqq,bg20,'例',g,'B---B ',file=daaA2)
            #daaA2.close()
 
 
-    if g <=100:
+    if g <=101:
         with open(r"D3.txt", "a+", encoding="utf-8") as f:
-            print(f"{z+1}C",'%02d %02d ' %cqq,'-3-',cg20,'例',g,'C---C ',file=f)
+            print(f"{z+1}CB",'%02d %02d %02d ' %cqq,'-3-',cg20,'例',g,'C---C ',file=f)
         
            #print('--------------2000000:')
            #print(h,"--------",g,"--------",jz1)
            #daaA2=open(r'D3.txt','a+')
            #print('-----------,*z+,g,'例',file=daa2)
-           #print(f"{z+1}C",'%02d %02d ' %cqq,cg20,'例',g,'C---C ',file=daaA2)
+           #print(f"{z+1}CB",'%02d %02d %02d ' %cqq,cg20,'例',g,'C---C ',file=daaA2)
            #daaA2.close()
 
+with open(r"a1.txt", "a+", encoding="utf-8") as f:
+            print('---   ***  --- ' ,file=f)
 
+with open(r"b1.txt", "a+", encoding="utf-8") as ff:
+            print('---   ***  --- ' ,file=ff)
+
+with open(r"c1.txt", "a+", encoding="utf-8") as fff:
+            print('---   ***  --- ' ,file=fff)
 
 
 
