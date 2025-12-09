@@ -2,7 +2,7 @@ const WS_READY_STATE_OPEN = 1;
 const WS_READY_STATE_CLOSING = 2;
 const CF_FALLBACK_IPS = ['[2a00:1098:2b::1:6815:5881]'];
 
-// 复用 TextEncoder，避免重复创建
+// ���� TextEncoder�������ظ�����
 const encoder = new TextEncoder();
 
 import { connect } from 'cloudflare:sockets';
@@ -28,7 +28,7 @@ export default {
       
       handleSession(server).catch(() => safeCloseWebSocket(server));
 
-      // 修复 spread 类型错误
+      // �޸� spread ���ʹ���
       const responseInit = {
         status: 101,
         webSocket: client
@@ -117,7 +117,7 @@ async function handleSession(webSocket) {
         remoteWriter = remoteSocket.writable.getWriter();
         remoteReader = remoteSocket.readable.getReader();
 
-        // 发送首帧数据
+        // ������֡����
         if (firstFrameData) {
           await remoteWriter.write(encoder.encode(firstFrameData));
         }
@@ -127,13 +127,13 @@ async function handleSession(webSocket) {
         return;
 
       } catch (err) {
-        // 清理失败的连接
+        // ����ʧ�ܵ�����
         try { remoteWriter?.releaseLock(); } catch {}
         try { remoteReader?.releaseLock(); } catch {}
         try { remoteSocket?.close(); } catch {}
         remoteWriter = remoteReader = remoteSocket = null;
 
-        // 如果不是 CF 错误或已是最后尝试，抛出错误
+        // ������� CF �������������ԣ��׳�����
         if (!isCFError(err) || i === attempts.length - 1) {
           throw err;
         }

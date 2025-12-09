@@ -2,7 +2,7 @@ const WS_READY_STATE_OPEN = 1;
 const WS_READY_STATE_CLOSING = 2;
 const CF_FALLBACK_IPS = ['[2a00:1098:2b::1:6815:5881]'];
 
-// å¤ç”¨ TextEncoderï¼Œé¿å…é‡å¤åˆ›å»º
+// ¸´ÓÃ TextEncoder£¬±ÜÃâÖØ¸´´´½¨
 const encoder = new TextEncoder();
 
 import { connect } from 'cloudflare:sockets';
@@ -28,7 +28,7 @@ export default {
       
       handleSession(server).catch(() => safeCloseWebSocket(server));
 
-      // ä¿®å¤ spread ç±»å‹é”™è¯¯
+      // ĞŞ¸´ spread ÀàĞÍ´íÎó
       const responseInit = {
         status: 101,
         webSocket: client
@@ -117,7 +117,7 @@ async function handleSession(webSocket) {
         remoteWriter = remoteSocket.writable.getWriter();
         remoteReader = remoteSocket.readable.getReader();
 
-        // å‘é€é¦–å¸§æ•°æ®
+        // ·¢ËÍÊ×Ö¡Êı¾İ
         if (firstFrameData) {
           await remoteWriter.write(encoder.encode(firstFrameData));
         }
@@ -127,13 +127,13 @@ async function handleSession(webSocket) {
         return;
 
       } catch (err) {
-        // æ¸…ç†å¤±è´¥çš„è¿æ¥
+        // ÇåÀíÊ§°ÜµÄÁ¬½Ó
         try { remoteWriter?.releaseLock(); } catch {}
         try { remoteReader?.releaseLock(); } catch {}
         try { remoteSocket?.close(); } catch {}
         remoteWriter = remoteReader = remoteSocket = null;
 
-        // å¦‚æœä¸æ˜¯ CF é”™è¯¯æˆ–å·²æ˜¯æœ€åå°è¯•ï¼ŒæŠ›å‡ºé”™è¯¯
+        // Èç¹û²»ÊÇ CF ´íÎó»òÒÑÊÇ×îºó³¢ÊÔ£¬Å×³ö´íÎó
         if (!isCFError(err) || i === attempts.length - 1) {
           throw err;
         }
