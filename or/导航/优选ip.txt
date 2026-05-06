@@ -1,4 +1,28 @@
-104.18.12.229
+
+来自 https://gist.github.com/holdbreath
+
+
+43.168.16.112:443#HKG Cfastip-Hero*x10 -40ms -30.47Mbps
+83.229.123.217:443#HKG Cfastip-Hero*x7 -40ms -89.78Mbps
+45.145.229.122:443#HKG Cfastip-Hero*x6 -47ms -38.22Mbps
+103.198.203.136:443#HKG Cfastip-Hero*x5 -36ms -174.61Mbps
+149.104.5.93:443#HKG Cfastip-Hero*x4 -29ms -60.41Mbps
+8.223.63.150:443#HKG Cfastip-Hero*x4 -36ms -184.68Mbps
+47.57.1​​82.141:443#HKG Cfastip-Hero*x4 -36ms -159.61Mbps
+103.44.255.29:443#HKG Cfastip-Hero*x4 -21ms -132.17Mbps
+207.57.1​​28.9:443#HKG Cfastip-Hero*x3 -42ms -62.15Mbps
+8.223.63.189:443#HKG Cfastip-Hero*x3 -31ms -138.58Mbps
+
+47.239.231.121:443#HKG Cfastip -36ms -173.26Mbps
+47.57.1​​82.141:443#HKG Cfastip -36ms -159.61Mbps
+103.44.255.29:443#HKG Cfastip -21ms -132.17Mbps
+43.154.131.189:443#HKG Cfastip -31ms -105.67Mbps
+83.229.123.217:443#HKG Cfastip -40ms -89.78Mbps
+38.207.174.77:443#HKG Cfastip -39ms -63.08Mbps
+156.243.246.124:443#SJC Cfastip -154ms -76.35Mbps
+77.232.140.110:443#SJC Cfastip -153ms -72.26Mbps
+155.46.167.129:443#SJC Cfastip -159ms -65.82Mbps
+57.129.137.226:443#LHR Cfastip -195ms -42.24Mbps
 
 ip.sb
 2606:4700:20::681a:d1f
