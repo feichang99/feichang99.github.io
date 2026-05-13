@@ -2,7 +2,7 @@ J9999998
 
 来自 https://gist.github.com/holdbreath
 
-
+68.64.176.135
 43.168.16.112:443#HKG Cfastip-Hero*x10 -40ms -30.47Mbps
 83.229.123.217:443#HKG Cfastip-Hero*x7 -40ms -89.78Mbps
 45.145.229.122:443#HKG Cfastip-Hero*x6 -47ms -38.22Mbps
