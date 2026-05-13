@@ -137,8 +137,8 @@ echo Title 记录部署>>C:\Users\1\AppData\Local\Temp\部署feichang99.bat
 echo echo ----------部署feichang99:^>^>D:\完整\电脑\快捷\备份df记录.txt  %date% %time%^>^>D:\完整\电脑\快捷\备份df记录.txt>>C:\Users\1\AppData\Local\Temp\部署feichang99.bat
 echo echo. ^>^>D:\完整\电脑\快捷\备份df记录.txt>>C:\Users\1\AppData\Local\Temp\部署feichang99.bat
 echo %%1 start mshta vbscript:createobject("wscript.shell").run^(^"^"^"%%^~^0^"^"^ :^:^"^,^0^)(window.close)^&^&exit >C:\Users\1\AppData\Local\Temp\部署feichang990.bat
-echo del \q C:\Users\1\AppData\Local\Temp\部署feichang99.bat>>C:\Users\1\AppData\Local\Temp\部署feichang990.bat
-echo del \q C:\Users\1\AppData\Local\Temp\部署feichang990.bat>>C:\Users\1\AppData\Local\Temp\部署feichang990.bat
+echo del /q "C:\Users\1\AppData\Local\Temp\部署feichang99.bat">>C:\Users\1\AppData\Local\Temp\部署feichang990.bat
+echo del /q "C:\Users\1\AppData\Local\Temp\部署feichang990.bat">>C:\Users\1\AppData\Local\Temp\部署feichang990.bat
 echo start C:\Users\1\AppData\Local\Temp\部署feichang990.bat>>C:\Users\1\AppData\Local\Temp\部署feichang99.bat
 echo exit>>C:\Users\1\AppData\Local\Temp\部署feichang99.bat
 echo exit>>C:\Users\1\AppData\Local\Temp\部署feichang990.bat
