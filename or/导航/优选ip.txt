@@ -23,6 +23,44 @@ J9999998
 172.67.214.234
 2606:4700:20::681a:d1f
 104.26.13.31
+2a06:98c1:3122:12ec:d36d:d3e4:64ef:3d5
+对应常见 IPv4: 188.114.97.2
+188.114.96.2
+188.114.96.8
+npmjs.com
+cdnjs.com
+discord.com
+openai.com / chatgpt.com（OpenAI 官网及 ChatGPT）
+
+anthropic.com / claude.ai（Anthropic 官网及 Claude 镜像）
+
+huggingface.co（全球最大的开源 AI 模型社区）
+
+midjourney.com（知名 AI 绘画平台）
+
+npmjs.com（Node.js 的官方包管理器，流量极大）
+
+cdnjs.com（全球最大的前端开源 JavaScript 库 CDN）
+
+github.io（GitHub Pages 个人博客/项目主页的默认托管域名）
+
+gitlab.com（知名代码托管与 CI/CD 平台）
+
+docker.com（Docker 官网及部分镜像注册表服务）
+
+discord.com（全球最大的游戏/社区语音及文字聊天电商）
+
+notion.so / notion.com（最顶级的知识库与笔记协作软件）
+
+medium.com（全球最大的高质量博客与文章技术分享平台）
+
+pixiv.net（亚洲最大的插画交流网站，其 CDN 节点大量使用 CF）
+
+twitch.tv（亚马逊旗下的全球最大游戏直播平台，部分 API 和静态资源走 CF）
+
+shein.com（全球快时尚跨境电商巨头 SHEIN 的部分海外接口）
+
+shopify.com（全球最大的独立站建站平台，旗下数百万个电商域名的底层解析全部在 CF）
 
 来自 https://gist.github.com/holdbreath
 
