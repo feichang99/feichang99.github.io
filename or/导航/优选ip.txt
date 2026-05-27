@@ -68,6 +68,28 @@ shopify.com（全球最大的独立站建站平台，旗下数百万个电商域
 104.16.2.2
 
 104.17.2.2
+香港
+2602:f79a:0:ab:8256:f2a7:175:c735         4       4       0.00    197.76    0.32            HKG
+2602:f79a:0:2f:9fc1:c398:9729:f07f        4       4       0.00    197.14    0.30            HKG
+2602:f79a:0:f071:6606:d935:8ba5:def9      4       4       0.00    198.83    0.27            HKG
+2602:f79a:0:f071:4b31:ed01:1c8a:eaa3      4       4       0.00    197.72    0.26            HKG
+2602:f79a:0:f071:c5e4:c6ce:e99f:7d55      4       4       0.00    196.97    0.24            HKG
+2602:f79a:0:2f:b7be:68b6:419d:360c        4       4       0.00    197.94    0.20            HKG
+2602:f79a:0:b5:f5a6:a251:e4eb:7238        4       4       0.00    200.10    0.18            HKG
+2602:f79a:0:f071:4b28:4786:962c:5978      4       4       0.00    198.36    0.13            HKG
+2602:f79a:0:f071:6606:5fc8:9e22:d472      4       4       0.00    199.09    0.12
+
+-----------------
+2606:4700:83ba:c5a8:b1e8:6b2b:f3c2:c841   4       4       0.00    119.62    0.75            MAA
+2606:4700:83ba:c5a8:b171:c1e4:7665:d5c6   4       4       0.00    116.89    0.58            MAA
+2606:4700:83ba:c5a8:b1e8:6bbd:fdd5:72cd   4       4       0.00    123.21    0.51            MAA
+2606:4700:83ba:c5a8:b1c5:9a6e:b3e6:bb52   4       4       0.00    120.52    0.51            MAA
+2606:4700:83ba:c5a8:b1e8:f76d:1b72:d49b   4       4       0.00    121.71    0.41            MAA
+2606:4700:83ba:c5a8:b171:c10e:d029:eb39   4       4       0.00    123.27    0.36            MAA
+2606:4700:83ba:c5a8:b1e8:f76d:f80d:7980   4       4       0.00    121.94    0.27            MAA
+2606:4700:83ba:c5a8:b171:c1e4:1dc7:fa4b   4       4       0.00    120.36    0.22            MAA
+2606:4700:83ba:c5a8:b171:c1e4:76d6:6a6a   4       4       0.00    120.58    0.19            MAA
+2606:4700:83ba:c5a8:b1e8:6b2b:f310:12a3   4       4       0.00    121.01    0.19            MAA
 
 2606:4700:83ba:c5a8:b171:c10e:d029:fdd7   4       4       0.00    120.98    1.05            MAA
 2606:4700:83ba:eda2:cfc5:af7:45a5:f977    4       4       0.00    121.96    0.62            MAA
@@ -1361,3 +1383,135 @@ proxies:
         Host: Koma-YT.PAGeS.Dev
     udp: true
     delay: 378
+
+
+time.cloudflare.com
+shopify.com
+time.is
+icook.hk
+icook.tw
+ip.sb
+japan.com
+malaysia.com
+russia.com
+singapore.com
+skk.moe
+www.visa.com
+www.visa.com.sg
+www.visa.com.hk
+www.visa.com.tw
+www.visa.co.jp
+www.visakorea.com
+www.gco.gov.qa
+www.gov.se
+www.gov.ua
+www.digitalocean.com
+www.csgo.com
+www.shopify.com
+www.whoer.net
+www.whatismyip.com
+www.ipget.net
+www.hugedomains.com
+www.udacity.com
+www.4chan.org
+www.okcupid.com
+www.glassdoor.com
+www.udemy.com
+www.baipiao.eu.org
+alejandracaiccedo.com
+log.bpminecraft.com
+www.boba88slot.com
+gur.gov.ua
+www.zsu.gov.ua
+www.iakeys.com
+edtunnel-dgp.pages.dev
+www.d-555.com
+fbi.gov
+www.sean-now.com
+download.yunzhongzhuan.com
+whatismyipaddress.com
+www.ipaddress.my
+www.pcmag.com
+www.ipchicken.com
+www.iplocation.net
+iplocation.io
+www.who.int
+www.wto.org
+wz.weishao2023.dk.eu.org 
+wz.weishao2023.uk.eu.org 
+cloudflare.cfgo.cc 
+stock.hostmonit.com 
+www.lyzdzy.com 
+xs.wxtv.cc 
+cf.zmdhc.com 
+www.90dushu.com 
+www.tushencn.com 
+7sc.cc 
+0550cq.com 
+www.xinpian8.com 
+www.c333.net 
+www.7749tv.com 
+www.888dyy.cc 
+manmankan.cc 
+www.ddwhm.com
+cdn-all.xn--b6gac.eu.org
+优选第三方域名
+plaintext
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+086181.xyz 
+yx.887141.xyz
+8.889288.xyz
+acjp2.cloudflarest.link
+achk.cloudflarest.link
+cf-st.annoy.eu.org
+cf.0sm.com
+xn--b6gac.eu.org
+cf.877771.xyz
+cf.515188.xyz
+cfip.xxxxxxxx.tk
+cf.zhetengsha.eu.org
+cfip.1323123.xyz
+bestcf.onecf.eu.org
+cf.345673.xyz
+jp.byun.eu.org
+un.goasa.top
+emby2.misakaf.org
+四、公益Cloudflare优选反代IP、优选反代域名
+优选第三方反代域名
+plaintext
+
+1
+2
+3
+4
+5
+6
+bestproxy.onecf.eu.org#Mingyu大佬提供维护
+acjp2.cloudflarest.link:2052#KJKKK大佬提供维护
+acsg.cloudflarest.link:2052#KJKKK大佬提供维护
+acsg3.cloudflarest.link:2052#KJKKK大佬提供维护
+proxy.xxxxxxxx.tk#OTC大佬提供维护
+cdn-b100.xn--b6gac.eu.org
+优选第三方优选反代IP的API
+plaintext
+
+1
+https://ipdb.api.030101.xyz/?type=bestproxy&country=true
