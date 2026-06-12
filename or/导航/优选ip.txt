@@ -1515,3 +1515,46 @@ plaintext
 
 1
 https://ipdb.api.030101.xyz/?type=bestproxy&country=true
+
+
+转ipv6
+
+@echo off
+setlocal enabledelayedexpansion
+cls
+
+:: 清空或创建 2.txt
+type nul > "2.txt"
+
+:: 16进制字符表
+set "hex=0123456789abcdef"
+
+:: 逐行读取 1.txt 并按点号切分
+for /f "tokens=1-4 delims=." %%a in (1.txt) do (
+    
+    :: 转换第1个数字
+    set /a "h1=%%a / 16", "h2=%%a %% 16"
+    for %%x in (!h1!) do set "c1=!hex:~%%x,1!"
+    for %%x in (!h2!) do set "c2=!hex:~%%x,1!"
+    
+    :: 转换第2个数字
+    set /a "h3=%%b / 16", "h4=%%b %% 16"
+    for %%x in (!h3!) do set "c3=!hex:~%%x,1!"
+    for %%x in (!h4!) do set "c4=!hex:~%%x,1!"
+    
+    :: 转换第3个数字
+    set /a "h5=%%c / 16", "h6=%%c %% 16"
+    for %%x in (!h5!) do set "c5=!hex:~%%x,1!"
+    for %%x in (!h6!) do set "c6=!hex:~%%x,1!"
+    
+    :: 转换第4个数字
+    set /a "h7=%%d / 16", "h8=%%d %% 16"
+    for %%x in (!h7!) do set "c7=!hex:~%%x,1!"
+    for %%x in (!h8!) do set "c8=!hex:~%%x,1!"
+    
+    :: 写入 2.txt
+    echo %%a.%%b.%%c.%%d ^=^> ::ffff:!c1!!c2!!c3!!c4!:!c5!!c6!!c7!!c8! >> "2.txt"
+)
+
+echo 转换完成了，请查看 2.txt。
+pause
