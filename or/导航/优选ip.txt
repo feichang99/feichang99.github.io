@@ -1,4 +1,5 @@
 J9999998
+*6jabub+
 
 查询 IPv6： nslookup -query=AAAA 域名
 
