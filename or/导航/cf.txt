@@ -1,0 +1,42 @@
+Cloudflare 旗下拥有、运营或作为技术支撑的官方域名非常多，按其用途可以大致分为以下几大类：
+
+1. 核心业务与控制面板域名
+这些是 Cloudflare 用于提供企业官网、用户控制面板、API 以及基础服务的官方域名：  
+Cloudflare Docs
+
+cloudflare.com — Cloudflare 官方主站
+
+cloudflare.net — 主要用于网络基础设施、内部服务及部分 CDN 节点的反向代理
+
+cloudflareaccess.com — 用于 Cloudflare One / Zero Trust（零信任）及 Access 访问控制登录
+
+cloudflareclient.com — 用于客户端软件（如 Cloudflare WARP / 1.1.1.1 客户端）的后台连接与 API 交互
+
+2. 公共 DNS 与加密服务域名
+cloudflare-dns.com — 著名的公共 DNS 服务（1.1.1.1）的 DoH（DNS over HTTPS）及 API 访问域名
+
+1.1.1.1 — 官方的 IP 地址，同时其相关服务也通过 one.one.one.one 等域名访问
+
+3. 技术测试、研究与安全隐私域名
+这些是 Cloudflare 用于公开测试新网络协议（如 TLS 1.3、ECH、DoH 等）的官方实验域名：
+
+cloudflare-ech.com — 专门用于 ECH（Encrypted Client Hello）协议的官方标准公共外层 SNI 域名
+
+crypto.cloudflare.com — 用于测试现代密码学、TLS 特性及 ECH 状态的官方测试页（访问它可以看到当前连接是否启用了加密 SNI）  
+Planisys
+
+cloudflareresearch.com — Cloudflare 官方技术研发与安全研究团队的域名
+
+cloudflare-gateway.com — 用于安全网关与流量过滤服务的官方域名
+
+4. 辅助与工具域名
+cloudflarestatus.com — 官方全球服务状态与故障实时播报页面
+
+cloudflarecommunity.com — 官方用户与开发者社区论坛
+
+cloudflare.cdn / 各类 CDN 节点后缀 — 用于加速和静态资源分发  
+Cloudflare
+
+总结  
+Cloudflare Blog
+在这些官方域名中，只有 cloudflare-ech.com 是被官方指定作为所有 ECH 网站外层握手代理的唯一标准域名。其他的官方域名虽然也属于 Cloudflare，但由于用途不同（如 DNS 解析、面板管理、安全网关等），是无法用来替代 cloudflare-ech.com 做底层 ECH 客户端配置的。
