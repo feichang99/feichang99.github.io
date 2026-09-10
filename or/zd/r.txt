@@ -1,0 +1,100 @@
+110.242.68.4 www.baidu.com
+2a03:2880:f12a:83:face:b00c:0:25de www.aboluowang.com
+#2606:4700:f:fbff:d679:20c:b034:99c1 cf-lt.sharecentre.online
+2606:4700:9646:5ddb:ab33:6f05:5c11:d6b3 cf-lt.sharecentre.online
+#172.67.180.217 cf-lt.sharecentre.online
+#172.67.50.27 cf-lt.sharecentre.online
+#58.254.137.162 translate.google.com
+#58.254.137.162 translate.googleapis.com
+0.0.0.0 hub5btmain.sandai.net
+0.0.0.0 hub5emu.sandai.net
+0.0.0.0 upgrade.xl9.xunlei.com
+# 头条
+0.0.0.0 mon.zijieapi.com
+#0.0.0.0 www.bing.com
+#208.160.166.57 www.youtube.com
+#208.65.153.238 www.youtube.com
+#208.65.153.238 googlevideo.com
+#208.65.153.238 a5meknsd.googlevideo.com
+
+0.0.0.0 www.zztongyun.com
+0.0.0.0 zztongyun.com
+
+#0.0.0.0 googlesyndication.com
+#0.0.0.0 doubleclick.net
+0.0.0.0 best.sched.sma.tdnsstic1.cn
+0.0.0.0 best.sched.sma.tdnsstic2.cn
+0.0.0.0 best.sched.sma.tdnsstic3.cn
+0.0.0.0 best.sched.sma.tdnsstic4.cn
+0.0.0.0 best.sched.sma.tdnsstic5.cn
+
+#0.0.0.0 googleads.g.doubleclick.net
+
+#0.0.0.0 ads.youtube.com
+0.0.0.0 www.a.shifen.com
+0.0.0.0 www.b.shifen.com
+0.0.0.0 www.c.shifen.com
+
+#39.156.66.10 baidu.com 
+#39.156.66.10 *.baidu.com
+#180.95.234.220 *.ifeng.com
+#best.sched.sma.tdnsstic1.cn
+
+0.0.0.0 www.likecs.com
+
+#142.251.220.78 translate.google.com
+#142.251.220.78 translate.google.cn
+
+#140.82.113.3 github.com
+#104.21.48.244 jh9.029sina.workers.dev
+#172.67.145.171 500.029sina.workers.dev
+#172.67.138.243 600.029sina.workers.dev
+#104.21.48.244 rapid-salad-f4b5.vvread.workers.dev
+
+#104.21.83.180 www.zj0029.ml
+185.199.109.153 feichang99.github.io
+185.199.109.153 zj029.github.io
+#185.199.109.153 jzg001.github.io
+#185.199.109.153 xinlang029.github.io
+#13.107.42.13 onedrive.live.com
+
+#216.58.200.238 www.youtube.com 
+#203.208.33.100 gdata.youtube.com
+
+#40.100.54.2 onedrive.live.com
+
+# youtube
+#216.58.200.238 www.youtube.com
+#216.58.200.46 www.youtube.com
+#172.217.160.110 www.youtube.com
+#-----Google
+#203.208.40.55 translate.google.com
+#120.253.250.226 translate.google.com
+#120.253.250.226 translate.google.cn
+#113.108.239.162 maps.google.com
+#113.108.239.162 ditu.google.cn
+#203.208.39.193 www.google.com
+
+
+#-----OneDrive
+#134.170.108.26 onedrive.live.com 
+#134.170.108.152 skyapi.onedrive.live.com
+
+# ----阻止PotPlayer更新
+0.0.0.0 tiara.daum.net
+0.0.0.0 start.tiara.daum.net
+0.0.0.0 get.daum.net
+
+
+
+
+# --------------------------------------------------------------------------------------代联
+# 45.33.59.253 oo.54honxd.club
+#85.209.154.224 bv1.innlym.me
+#104.237.140.243 oo.54honxd.club
+#114.43.164.237 tw.ghelper.net
+#104.237.140.243 oo.54honxd.club
+#167.86.81.253 de.ghelper.net 
+
+#183.178.58.198 hkbn05.ghelper.net
+#94.190.209.24 hk-pccw-03.ghelper.net

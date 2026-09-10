@@ -1,0 +1,27 @@
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+  // Cloudflare 的标准 DoH 端点
+  const upstream = "https://dns.google/dns-query"
+  const url = new URL(request.url)
+  
+  // 确保请求路径正确连接 (例如: /dns-query)
+  // 如果你的 Worker 直接部署在根目录，这里会把路径转发给上游
+  const newUrl = new URL(url.pathname + url.search, upstream)
+
+  const newRequest = new Request(newUrl, {
+    method: request.method,
+    headers: request.headers,
+    body: request.body,
+    redirect: 'follow'
+  })
+
+  // 添加必要的 CORS 头，防止跨域问题
+  const response = await fetch(newRequest)
+  let newResponse = new Response(response.body, response)
+  newResponse.headers.set('Access-Control-Allow-Origin', '*')
+  
+  return newResponse
+}

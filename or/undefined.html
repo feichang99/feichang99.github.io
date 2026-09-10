@@ -1,0 +1,104 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!DOCTYPE html>
+<html>
+<head>
+	<title>ChatGPT</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: lightblue;
+		}
+
+		.container {
+			margin: auto;
+			width: 50%;
+			background-color: white;
+			padding: 20px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+		}
+
+		.message {
+			margin-bottom: 10px;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		.user-message {
+			background-color: #ccc;
+			text-align: left;
+		}
+
+		.bot-message {
+			background-color: #00bfff;
+			color: white;
+			text-align: right;
+		}
+
+		.text-input {
+			width: 70%;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			margin-right: 10px;
+		}
+
+		.-btn {
+			background-color: #00bfff;
+			color: white;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="messages"></div>
+		<div class="input-container">
+			<input type="text" class="text-input">
+			<button class="send-btn">send</button>
+		</div>
+	</div>
+	<script>
+		const messages = document.querySelector('.messages');
+		const textInput = document.querySelector('.text-input');
+		const sendBtn = document.querySelector('.send-btn');
+
+		function createMessageDiv(message, isBotMessage) {
+			const messageDiv = document.createElement('div');
+			messageDiv.classList.add('message');
+			if(isBotMessage) {
+				messageDiv.classList.add('bot-message');
+			} else {
+				messageDiv.classList.add('user-message');
+			}
+			messageDiv.innerText = message;
+			return messageDiv;
+		}
+
+		function sendMessage() {
+			const userInput = textInput.value.trim();
+			if(userInput === '') {
+				return;
+			}
+			const userMessageDiv = createMessageDiv(userInput, false);
+			messages.appendChild(userMessageDiv);
+			textInput.value = '';
+
+			// Call your API to get the bot's response here
+			const botResponse = 'This is the bot\'s response.';
+
+			const botMessageDiv = createMessageDiv(botResponse, true);
+			messages.appendChild(botMessageDiv);
+			messages.scrollTop = messages.scrollHeight;
+		}
+
+		sendBtn.addEventListener('click', sendMessage);
+		document.addEventListener('keypress', (e) => {
+			if(e.key === 'Enter') {
+				sendMessage();
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>纯前端 WebRTC 语音聊天（手动信令）</title>
+<style>
+  body { font-family: sans-serif; max-width: 600px; margin: 20px auto; background:#f7f7f7; padding:20px; }
+  textarea { width: 100%; height: 120px; font-family: monospace; margin-bottom: 10px; }
+  button { font-size: 1em; padding: 10px; margin: 5px 0; width: 100%; cursor: pointer; }
+  audio { width: 100%; margin-top: 15px; background: #000; }
+  label { font-weight: bold; }
+  #status { margin: 10px 0; font-weight: bold; }
+</style>
+</head>
+<body>
+<h2>纯前端 WebRTC 语音聊天（手动信令）</h2>
+
+<label>本地生成的信令数据（复制给对方）：</label>
+<textarea id="localOffer" readonly placeholder="生成后这里显示信令数据"></textarea>
+
+<button id="createOffer">创建呼叫 Offer</button>
+
+<label>粘贴对方的信令数据：</label>
+<textarea id="remoteOffer" placeholder="粘贴对方复制的信令数据"></textarea>
+
+<button id="acceptAnswer">接收并发送 Answer</button>
+
+<button id="acceptOffer">接收对方 Offer 并生成 Answer</button>
+
+<p id="status">状态：等待操作</p>
+
+<audio id="remoteAudio" autoplay></audio>
+
+<script>
+  let pc;
+  let localStream;
+
+  const localOfferTextarea = document.getElementById('localOffer');
+  const remoteOfferTextarea = document.getElementById('remoteOffer');
+  const status = document.getElementById('status');
+  const remoteAudio = document.getElementById('remoteAudio');
+
+  // STUN服务器配置
+  const config = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] };
+
+  // 获取麦克风
+  async function getLocalStream() {
+    try {
+      localStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      status.textContent = '✅ 麦克风已准备好';
+    } catch (e) {
+      status.textContent = '❌ 获取麦克风失败，请允许权限';
+      throw e;
+    }
+  }
+
+  // 创建 RTCPeerConnection
+  function createPeerConnection() {
+    pc = new RTCPeerConnection(config);
+
+    pc.onicecandidate = event => {
+      if (event.candidate === null) {
+        // ICE 收集完毕，更新信令数据文本框
+        localOfferTextarea.value = JSON.stringify(pc.localDescription);
+        status.textContent = '✅ 信令数据生成完毕，请复制发送给对方';
+      }
+    };
+
+    pc.ontrack = event => {
+      remoteAudio.srcObject = event.streams[0];
+      status.textContent = '✅ 收到远端音频流';
+    };
+
+    if (localStream) {
+      localStream.getTracks().forEach(track => pc.addTrack(track, localStream));
+    }
+  }
+
+  // 创建 Offer
+  document.getElementById('createOffer').onclick = async () => {
+    await getLocalStream();
+    createPeerConnection();
+    const offer = await pc.createOffer();
+    await pc.setLocalDescription(offer);
+    status.textContent = '⏳ 生成Offer中，请稍候';
+  };
+
+  // 接收对方的 Offer，生成 Answer
+  document.getElementById('acceptOffer').onclick = async () => {
+    const remoteDesc = JSON.parse(remoteOfferTextarea.value);
+    if (!remoteDesc || remoteDesc.type !== 'offer') {
+      alert('请粘贴有效的 Offer 信令数据');
+      return;
+    }
+    await getLocalStream();
+    createPeerConnection();
+    await pc.setRemoteDescription(remoteDesc);
+    const answer = await pc.createAnswer();
+    await pc.setLocalDescription(answer);
+    localOfferTextarea.value = JSON.stringify(pc.localDescription);
+    status.textContent = '✅ Answer 生成完毕，请复制发送给对方';
+  };
+
+  // 接收对方的 Answer，完成连接
+  document.getElementById('acceptAnswer').onclick = async () => {
+    const remoteDesc = JSON.parse(remoteOfferTextarea.value);
+    if (!remoteDesc || remoteDesc.type !== 'answer') {
+      alert('请粘贴有效的 Answer 信令数据');
+      return;
+    }
+    await pc.setRemoteDescription(remoteDesc);
+    status.textContent = '✅ 连接建立成功，开始语音通话';
+  };
+</script>
+
+</body>
+</html>

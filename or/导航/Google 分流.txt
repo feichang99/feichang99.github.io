@@ -1,0 +1,17 @@
+# Google 分流
+DOMAIN-SUFFIX,google.com,CF_V8_usa.visa.com_443
+DOMAIN-SUFFIX,googleapis.com,CF_V8_usa.visa.com_443
+DOMAIN-SUFFIX,gstatic.com,CF_V8_usa.visa.com_443
+DOMAIN-SUFFIX,aboluowang.com,CF_V8_usa.visa.com_443
+
+# YouTube 分流
+DOMAIN-SUFFIX,youtube.com,🇳🇱NL_1|3.4MB/s
+DOMAIN-SUFFIX,ytimg.com,🇳🇱NL_1|3.4MB/s
+
+# 其他国外网站走 Node3
+DOMAIN-SUFFIX,facebook.com,Node3
+DOMAIN-SUFFIX,twitter.com,CF_V8_usa.visa.com_443
+DOMAIN-SUFFIX,reddit.com,Node3
+
+# 国内网站直连
+GEOIP,CN,DIRECT

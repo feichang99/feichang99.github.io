@@ -1,0 +1,167 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com  # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+
+# 蔽微软遥测服务的内容：
+0.0.0.0 www.microsoft.com
+0.0.0.0 microsoft.com
+0.0.0.0 telemetry.microsoft.com
+0.0.0.0 wns.notify.windows.com.akadns.net
+0.0.0.0 v10-win.vortex.data.microsoft.com.akadns.net
+0.0.0.0 us.vortex-win.data.microsoft.com
+0.0.0.0 us-v10.events.data.microsoft.com
+0.0.0.0 urs.microsoft.com.nsatc.net
+0.0.0.0 watson.telemetry.microsoft.com
+0.0.0.0 watson.ppe.telemetry.microsoft.com
+0.0.0.0 vsgallery.com
+0.0.0.0 watson.live.com
+0.0.0.0 watson.microsoft.com
+0.0.0.0 telemetry.remoteapp.windowsazure.com
+0.0.0.0 telemetry.urs.microsoft.com
+
+# 日常网
+113.207.69.188 www.ifeng.com
+
+#----------v2
+#2606:4700:9646:5ddb:ab33:6f05:5c11:d6b3 cf-lt.sharecentre.online
+#2602:FE90:501:3D7::E8CD:B148         德国的
+#2602:fe90:807:3::34e:40d6    171.22.130.209
+#2400:3F60:10::2114                          非常快
+#46.3.81.11                                         好快
+#107.189.6.241
+#2606:4700:0:841f:dad2:3020:5ede:21fe cf-lt.sharecentre.online
+#173.245.49.161 cf-lt.sharecentre.online
+#172.64.171.188 cf-lt.sharecentre.online
+#172.64.171.188 cf.yxjnode.com
+#172.67.90.31 cf-lt.sharecentre.online
+#172.67.180.217 cf-lt.sharecentre.online
+
+#167.235.201.196 f-eu1.wvvvv.eu.org
+2a01:4f8:c012:98a5::1 f-eu1.wvvvv.eu.org
+#---
+110.242.68.4 www.baidu.com
+2a03:2880:f12a:83:face:b00c:0:25de www.aboluowang.com
+#2606:4700:f:fbff:d679:20c:b034:99c1 cf-lt.sharecentre.online
+
+#172.67.50.27 cf-lt.sharecentre.online
+#58.254.137.162 translate.google.com
+#58.254.137.162 translate.googleapis.com
+0.0.0.0 hub5btmain.sandai.net
+0.0.0.0 hub5emu.sandai.net
+0.0.0.0 upgrade.xl9.xunlei.com
+# 头条
+0.0.0.0 mon.zijieapi.com
+#0.0.0.0 www.bing.com
+#208.160.166.57 www.youtube.com
+#208.65.153.238 www.youtube.com
+#208.65.153.238 googlevideo.com
+#208.65.153.238 a5meknsd.googlevideo.com
+
+0.0.0.0 www.zztongyun.com
+0.0.0.0 zztongyun.com
+
+#0.0.0.0 googlesyndication.com
+#0.0.0.0 doubleclick.net
+0.0.0.0 best.sched.sma.tdnsstic1.cn
+0.0.0.0 best.sched.sma.tdnsstic2.cn
+0.0.0.0 best.sched.sma.tdnsstic3.cn
+0.0.0.0 best.sched.sma.tdnsstic4.cn
+0.0.0.0 best.sched.sma.tdnsstic5.cn
+
+#0.0.0.0 googleads.g.doubleclick.net
+
+#0.0.0.0 ads.youtube.com
+0.0.0.0 www.a.shifen.com
+0.0.0.0 www.b.shifen.com
+0.0.0.0 www.c.shifen.com
+
+#39.156.66.10 baidu.com 
+#39.156.66.10 *.baidu.com
+#180.95.234.220 *.ifeng.com
+#best.sched.sma.tdnsstic1.cn
+
+0.0.0.0 www.likecs.com
+
+#142.251.220.78 translate.google.com
+#142.251.220.78 translate.google.cn
+
+#140.82.113.3 github.com
+#104.21.48.244 jh9.029sina.workers.dev
+#172.67.145.171 500.029sina.workers.dev
+#172.67.138.243 600.029sina.workers.dev
+#104.21.48.244 rapid-salad-f4b5.vvread.workers.dev
+
+#104.21.83.180 www.zj0029.ml
+2606:50c0:8000::153 feichang99.github.io
+#185.199.109.153 feichang99.github.io
+185.199.109.153 zj029.github.io
+#185.199.109.153 jzg001.github.io
+#185.199.109.153 xinlang029.github.io
+#13.107.42.13 onedrive.live.com
+
+#216.58.200.238 www.youtube.com 
+#203.208.33.100 gdata.youtube.com
+
+#40.100.54.2 onedrive.live.com
+
+# youtube
+#216.58.200.238 www.youtube.com
+#216.58.200.46 www.youtube.com
+#172.217.160.110 www.youtube.com
+#-----Google
+#203.208.40.55 translate.google.com
+#120.253.250.226 translate.google.com
+#120.253.250.226 translate.google.cn
+#113.108.239.162 maps.google.com
+#113.108.239.162 ditu.google.cn
+#203.208.39.193 www.google.com
+
+
+#-----OneDrive
+13.107.42.13  onedrive.live.com 
+#20.135.20.1  skyapi.onedrive.live.com
+13.104.208.160 skyapi.onedrive.live.com
+20.189.173.15 self.events.data.microsoft.com
+40.90.136.179 dsm01pap005.storage.live.com
+104.215.26.185 api.onedrive.com
+
+
+
+45.33.20.235 outlook.linkedinlabs.com
+
+# ----阻止PotPlayer更新
+0.0.0.0 tiara.daum.net
+0.0.0.0 start.tiara.daum.net
+0.0.0.0 get.daum.net
+
+
+
+
+# --------------------------------------------------------------------------------------代联
+# 45.33.59.253 oo.54honxd.club
+#85.209.154.224 bv1.innlym.me
+#104.237.140.243 oo.54honxd.club
+#114.43.164.237 tw.ghelper.net
+#104.237.140.243 oo.54honxd.club
+#167.86.81.253 de.ghelper.net 
+
+#183.178.58.198 hkbn05.ghelper.net
+#94.190.209.24 hk-pccw-03.ghelper.net

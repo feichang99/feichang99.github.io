@@ -1,0 +1,59 @@
+.LOG
+关闭所有程序BAT
+taskkill /F /FI "USERNAME eq 7" /FI "IMAGENAME ne explorer.exe" /FI "IMAGENAME ne dwm.exe"
+
+13:39 2021/12/5
+1、淋浴水箱检查
+2、针线
+
+13:40 2021/12/5
+
+https://cdn.jsdelivr.net/gh/led029/tuchuang/gong/5.jpg
+https://cdn.jsdelivr.net/gh/led029/tuchuang/Google/浏览器扩展/6.JPG
+12:27 2021/12/6
+
+22:52 2021/12/6
+
+淘菜菜
+太白酒
+菜籽油
+
+
+
+
+22:47 2022/1/14*****************烟
+
+obfs4 217.160.250.212:443 867CC4E415999336F7803F9B5E468B208D59C9DC cert=TdArTFG+fRyETSrPHFJKAHsfbABtynbTx04qpOcBzAwZqjh88gZJtGCRyyOA4/hYi1NbQw iat-mode=0
+  obfs4 89.163.204.253:8443 04E4EBA0A303E580FE36C4667A15676C74A50428 cert=G0IEZm7Gxol/9ALd4iAWhLaFxcRZv+6PeJFXPugPyV64VEYgnL3GAELLL9JVNst+lpQkVA iat-mode=0
+  obfs4 81.61.62.30:9003 5A1321C9FC4BEBB2CE21CD98EF7E52857F981C64 cert=MQYYwI2AajgNii/Hni4tBKB0B/nS2aNpYCD8/4MjcSUUZ+2djzJ5wuDF31SdnMgprszvTw iat-mode=0
+
+
+22:29 2022/2/1*******充电电动刮胡子刀韩
+
+11:50 2022/2/11********充电俩小时-10天
+
+14:12 2022/2/18*********充电三小时-7天
+
+19:47 2022/2/27*********充电四小时
+
+1:05 2022/3/1************鼠标电池
+
+14:36 2022/3/10******充电5小时
+
+11:48 2022/3/24********充电5小时
+
+
+12日开瓶22日开瓶
+
+2022-08-03 鼠标
+
+10:20 2022/10/20
+这个很不错 
+
+13:24 2022/10/27
+一下订阅不通2022-10-27
+
+21:16 2023/1/28
+
+10 18 19 28-03 04 22
+

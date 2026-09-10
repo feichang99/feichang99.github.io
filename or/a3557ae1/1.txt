@@ -1,0 +1,18 @@
+git config --global user.name "GitHub用户名"
+git config --global user.email "GitHub的邮箱"
+
+ssh-add id_feichang #旧密钥名称，一般是id_rsa
+ssh-add xxxxxx #新创建的密钥名称
+
+ssh -T git@feichang99.github.com
+
+
+git config user.name "feichang99"
+git config user.email "haoyunzhuandi@163.com"
+
+npm install -g hexo-cli
+hexo init f
+
+npm install
+
+hexo init f
