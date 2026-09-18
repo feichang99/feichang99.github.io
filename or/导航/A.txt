@@ -1,0 +1,60 @@
+numbers   =  [4, 6, 8, 0, 2]
+bnumbers   =  [0, 2, 4, 8, 6]
+cnumbers   =  [6, 0, 8, 4, 2]
+
+numbers   =  [0, 2, 8, 4, 6]
+bnumbers   =  [2, 8, 0, 6, 4]
+cnumbers   =  [0, 8, 2, 4, 6]
+
+numbers   =  [6, 0, 2, 8, 4]
+bnumbers   =  [2, 4, 6, 8, 0]
+cnumbers   =  [2, 0, 6, 4, 8]
+
+numbers   =  [6, 4, 0, 8, 2]
+bnumbers   =  [6, 0, 2, 4, 8]
+cnumbers   =  [0, 8, 6, 4, 2]
+
+numbers   =  [6, 2, 0, 4, 8]
+bnumbers   =  [6, 4, 8, 2, 0]
+cnumbers   =  [8, 0, 6, 2, 4]
+
+numbers   =  [0, 4, 2, 8, 6]
+bnumbers   =  [8, 4, 0, 2, 6]
+cnumbers   =  [0, 6, 2, 4, 8]
+
+numbers   =  [2, 0, 8, 4, 6]
+bnumbers   =  [4, 8, 2, 6, 0]
+cnumbers   =  [2, 6, 4, 0, 8]
+
+numbers   =  [0, 4, 6, 8, 2]
+bnumbers   =  [4, 6, 8, 2, 0]
+cnumbers   =  [4, 0, 6, 8, 2]
+
+numbers   =  [2, 0, 4, 6, 8]
+bnumbers   =  [2, 4, 8, 6, 0]
+cnumbers   =  [0, 2, 8, 6, 4]
+
+numbers   =  [8, 0, 6, 2, 4]
+bnumbers   =  [0, 2, 6, 8, 4]
+cnumbers   =  [8, 0, 6, 4, 2]
+
+numbers   =  [8, 2, 4, 0, 6]
+bnumbers   =  [4, 8, 2, 6, 0]
+cnumbers   =  [2, 0, 8, 4, 6]
+
+numbers   =  [6, 2, 8, 0, 4]
+bnumbers   =  [6, 2, 4, 0, 8]
+cnumbers   =  [2, 0, 8, 4, 6]
+
+numbers   =  [4, 0, 8, 6, 2]
+bnumbers   =  [2, 8, 6, 0, 4]
+cnumbers   =  [2, 8, 0, 4, 6]
+
+numbers   =  [2, 4, 8, 0, 6]
+bnumbers   =  [0, 6, 2, 8, 4]
+cnumbers   =  [8, 0, 4, 2, 6]
+
+numbers   =  [0, 6, 8, 4, 2]
+bnumbers   =  [6, 8, 4, 0, 2]
+cnumbers   =  [6, 2, 8, 4, 0]
+
