@@ -1,3 +1,90 @@
+前150筛选出--84
+167.148.203.71:443#HK Kwai Chung AS205548 ZOUTER HK
+103.97.201.65:443#HK Kwai Chung AS205548 ZOUTER HK
+18.182.141.80:443#JP Tokyo AS16509 Amazon.com, Inc.
+158.178.224.158:8443#SG Kampong Loyang AS31898 Oracle Corporation
+167.148.6.161:2087#JP Tokyo AS63473 HostHatch Tokyo
+134.185.93.131:8443#SG Kampong Loyang AS31898 Oracle Corporation
+152.42.174.94:443#SG Singapore AS14061 DigitalOcean, LLC
+156.224.79.83:443#HK Hong Kong AS61112 HYTRON NETWORK HK
+152.42.163.208:443#SG Singapore AS14061 DigitalOcean, LLC
+178.128.86.3:443#SG Singapore AS14061 DigitalOcean, LLC
+168.144.44.84:443#SG Singapore AS14061 DigitalOcean, LLC
+168.144.109.68:443#SG Singapore AS14061 DigitalOcean, LLC
+109.107.140.90:443#JP Tokyo AS3258 xTom
+167.148.6.161:2083#JP Tokyo AS63473 HostHatch Tokyo
+157.245.50.181:443#SG Singapore AS14061 DigitalOcean, LLC
+167.172.90.175:443#SG Singapore AS14061 DigitalOcean, LLC
+140.245.127.48:443#SG Kampong Loyang AS31898 Oracle Corporation
+168.144.128.4:443#SG Singapore AS14061 DigitalOcean, LLC
+178.128.92.205:8443#SG Singapore AS14061 DigitalOcean, LLC
+45.192.200.133:443#JP Tokyo AS401615 ACCK LLC
+159.223.78.76:443#SG Singapore AS14061 DigitalOcean, LLC
+151.243.229.150:443#HK Kwai Chung AS205548 ZOUTER HK
+152.42.199.134:443#SG Singapore AS14061 DigitalOcean, LLC
+152.42.194.191:443#SG Singapore AS14061 DigitalOcean, LLC
+152.42.247.235:443#SG Singapore AS14061 DigitalOcean, LLC
+167.71.217.55:443#SG Singapore AS14061 DigitalOcean, LLC
+152.42.229.215:443#SG Singapore AS14061 DigitalOcean, LLC
+152.42.232.186:443#SG Singapore AS14061 DigitalOcean, LLC
+151.242.188.249:443#TW Taipei AS212336 ByteVirt LLC
+157.245.198.117:443#SG Singapore AS14061 DigitalOcean, LLC
+45.192.206.151:443#JP Tokyo AS61112 AkileCloud LLC
+178.93.160.236:443#SG Singapore AS30058 Private Customer
+168.144.102.226:443#SG Singapore AS14061 DigitalOcean, LLC
+103.27.187.254:443#JP Tokyo AS134835 Starry Network
+168.144.45.134:8443#SG Singapore AS14061 DigitalOcean, LLC
+167.71.213.95:443#SG Singapore AS14061 DigitalOcean, LLC
+165.22.99.214:443#SG Singapore AS14061 DigitalOcean, LLC
+168.144.36.249:443#SG Singapore AS14061 DigitalOcean, LLC
+167.71.198.82:8443#SG Singapore AS14061 DigitalOcean, LLC
+165.232.175.180:443#SG Singapore AS14061 DigitalOcean, LLC
+157.230.248.87:443#SG Singapore AS14061 DigitalOcean, LLC
+167.172.75.2:443#SG Singapore AS14061 DigitalOcean, LLC
+157.245.56.32:443#SG Singapore AS14061 DigitalOcean, LLC
+146.190.97.53:443#SG Singapore AS14061 DigitalOcean, LLC
+157.245.144.174:443#SG Singapore AS14061 DigitalOcean, LLC
+152.42.198.52:8443#SG Singapore AS14061 DigitalOcean, LLC
+146.190.100.44:443#SG Singapore AS14061 DigitalOcean, LLC
+129.212.229.240:443#SG Singapore AS14061 DigitalOcean, LLC
+161.118.210.121:443#SG Kampong Loyang AS31898 Oracle Corporation
+45.142.166.211:443#JP Tokyo AS3258 xTom
+168.144.41.69:443#SG Singapore AS14061 DigitalOcean, LLC
+152.42.246.237:443#SG Singapore AS14061 DigitalOcean, LLC
+134.185.91.72:443#SG Kampong Loyang AS31898 Oracle Corporation
+152.42.169.132:443#SG Singapore AS14061 DigitalOcean, LLC
+140.245.97.215:443#SG Kampong Loyang AS31898 Oracle Corporation
+168.144.39.64:443#SG Singapore AS14061 DigitalOcean, LLC
+157.230.44.151:443#SG Singapore AS14061 DigitalOcean, LLC
+159.65.141.109:443#SG Singapore AS14061 DigitalOcean, LLC
+168.144.47.94:443#SG Singapore AS14061 DigitalOcean, LLC
+45.192.200.133:8443#JP Tokyo AS401615 ACCK LLC
+159.89.203.141:443#SG Singapore AS14061 DigitalOcean, LLC
+152.42.175.157:443#SG Singapore AS14061 DigitalOcean, LLC
+152.42.235.119:443#SG Singapore AS14061 DigitalOcean, LLC
+157.245.155.10:443#SG Singapore AS14061 DigitalOcean, LLC
+13.193.212.73:443#JP Tokyo AS16509 Amazon.com, Inc.
+165.22.102.89:443#SG Singapore AS14061 DigitalOcean, LLC
+45.202.254.216:443#JP Tokyo AS61112 AkileCloud LLC
+45.221.115.170:443#HK Siu Sai Wan Estate AS967 VMISS Inc.
+152.42.174.66:443#SG Singapore AS14061 DigitalOcean, LLC
+161.118.198.6:8443#SG Kampong Loyang AS31898 Oracle Corporation
+159.223.88.166:443#SG Singapore AS14061 DigitalOcean, LLC
+165.245.178.114:443#SG Singapore AS14061 DigitalOcean, LLC
+167.172.68.31:443#SG Singapore AS14061 DigitalOcean, LLC
+161.118.227.139:8443#SG Kampong Loyang AS31898 Oracle Corporation
+165.245.184.76:443#SG Singapore AS14061 DigitalOcean, LLC
+165.22.59.251:443#SG Singapore AS14061 DigitalOcean, LLC
+168.144.96.147:443#SG Singapore AS14061 DigitalOcean, LLC
+152.42.231.213:443#SG Singapore AS14061 DigitalOcean, LLC
+159.65.8.14:443#SG Singapore AS14061 DigitalOcean, LLC
+167.71.203.125:443#SG Singapore AS14061 DigitalOcean, LLC
+154.19.187.190:443#JP Monzen-nakachō AS149042 Silicon Cloud Tokyo LLC
+178.128.99.226:443#SG Singapore AS14061 DigitalOcean, LLC
+165.22.106.241:443#SG Singapore AS14061 DigitalOcean, LLC
+141.11.43.55:443#SG Singapore AS136510 PRIVATE CUSTOMER
+
+
 ==========================================================
      YouTube 专用优选网速排名（第一行最适合看视频）
 ==========================================================
